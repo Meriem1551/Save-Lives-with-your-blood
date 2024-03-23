@@ -1,6 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
 :root{
     --light-pink:#fee5e5;
-    --medium-pink:#fbcfcf;
-    --red: #FC4F4F;
+    --medium-pink:#fed0d0;
+    --red: #fc1b1b;
     --dark-blue:#1E0377;
+    --white: white;
+    --font-family-paragraphs :Truculenta;
+    --font-family-heading: Kanit;
+    --font-weight-regular: 400;
+    --font-weight-semiBold: 600;
+    --font-weight-bold: 700;
+    --font-size: 20px;
+}
+/* header, main{
+    background-image: linear-gradient(to right, var(--light-pink), var(--medium-pink));
+} */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   background-image: url(./assets/images/Home/Background1.png);
+   background-repeat: no-repeat;
+   background-size:100%;
+}
+#header{
+    display: flex;
+    justify-content: end;
+    padding: 25px;
+    position:sticky;
+    top: 0px;
+    align-items: center;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-semiBold);
+    font-size: var(--font-size);
+}
+nav{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+a:hover{
+    color: var(--red);
+    cursor: pointer;
+}
+#header>img{
+    margin-right: auto;
+}
+.dropbtn {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .sub-header {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: var(--dark-blue);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-semiBold);
+  }
+  
+.dropdown-content a:hover {background-color: var(--light-pink);}
+.sub-header:hover .dropdown-content {display: block;}
+
+main{
+    padding: 20px 50px;
+}
+#landing{
+    display: flex;
+}
+.main-image{
+    width: 33%;
+    height: 100%;
+   border-top-right-radius: 30%;
+   border-top-left-radius: 30%;
+   border-bottom-right-radius: 30%;
+   border-bottom-left-radius: 30%;
+}
+.blood-bag{
+    margin-left: -220px;
+}
+.card{
+    margin-left: -150px;
+    display: grid;
+    align-items: center;
+    gap:    20px;
+    /* padding: 50px; */
+}
+.card>h1{
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-bold);
+    font-size: 2.8rem;
+    color: var(--red);
+}
+.card>p{
+    font-family: var(--font-family-paragraphs);
+    font-weight: var(--font-weight-semiBold);
+    color: var(--dark-blue);
+    font-size: var(--font-size);
+}
+.card>img{
+    margin-left: 300px; 
+}
+#join{
+    background-color: var(--red);
+    color: var(--white);
+    padding: 16px;
+    font-size: 16px;
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-semiBold);
+    border: none;
+    border-radius: 20px;
+    position: absolute;
+}
+.heart-smile{
+position: absolute;
+left: 400px;
+top: 350px;
 }
