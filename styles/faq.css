@@ -1,0 +1,38 @@
+.faq_body{
+    background-image: url(../assets/images/Faq/NewBG.png);
+    background-color: #FFF7F7;
+}
+main{
+    width: 500px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+h1{
+    font-family: var( --font-family-heading);
+    font-weight: var(--font-weight-bold);
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+.quest{
+    padding: 15px;
+    border-bottom: 2px solid var(--medium-pink);
+}
+h2{
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-semibold);
+    color: var(--dark-blue);
+}
+.quest>p{
+    display: none;
+    font-family: var(--font-family-paragraphs);
+    font-weight: var(--font-weight-regular);
+    color: var(--dark-blue);
+    font-size: var(--font-size);
+}
+.quest:hover > p {
+    display:block;
+    width: 400px;
+}
+.quest>h2:hover{
+    color: var(--red);
+}

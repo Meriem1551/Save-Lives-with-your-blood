@@ -149,3 +149,8 @@ position: absolute;
 left: 400px;
 top: 350px;
 }
+#footer{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
