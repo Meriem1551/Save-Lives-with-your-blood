@@ -199,22 +199,22 @@ top: 350px;
     margin-bottom: 20px;
     animation: animeY 3s alternate;
 }
-#statics{
+#container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: auto;
 }
-#statics .stat{
+#container .columns{
     background-color: var(--red);
     display: grid;
     place-items: center;
 }
-#statics .stat img{
+#container .columns img{
     height: 340px;
     width: 380px;
     animation: animeX 3s alternate;
 }
-#statics .stat h2{
+#container .columns h2{
     font-family: var(--font-family-heading);
     font-weight: var(--font-weight-regular);
     text-align: center;
@@ -223,16 +223,16 @@ top: 350px;
     width: 300px;
     margin-top: -20px;
 }
-#statics .heart{
+#container .heart{
     display: grid;
     place-items: center;
 }
-#statics .heart img{
+#container .heart img{
     height: 250px;
     width: 250px;
     animation: animeX 3s alternate;
 }
-#statics .heart h2{
+#container .heart h2{
     font-family: var(--font-family-heading);
     font-weight: var(--font-weight-regular);
     text-align: center;
