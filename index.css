@@ -94,9 +94,15 @@ a:hover{
 .dropdown-content a:hover {background-color: var(--light-pink);}
 .sub-header:hover .dropdown-content {display: block;}
 
+<<<<<<< HEAD
 /*main{
     padding: 20px 50px;
 }*/
+=======
+/* main{
+    padding: 20px 50px;
+} */
+>>>>>>> bcdc00aab204cbbdf199c357e114b09f955511dd
 #landing{
     display: flex;
 }
@@ -352,9 +358,12 @@ top: 350px;
     from{
         transform: translateY(100px);
     }
+<<<<<<< HEAD
 }
 #footer{
     display: flex;
     gap: 100px;
     justify-content: center;
+=======
+>>>>>>> bcdc00aab204cbbdf199c357e114b09f955511dd
 }
