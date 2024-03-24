@@ -94,9 +94,7 @@ a:hover{
 .dropdown-content a:hover {background-color: var(--light-pink);}
 .sub-header:hover .dropdown-content {display: block;}
 
-/*main{
-    padding: 20px 50px;
-}*/
+
 #landing{
     display: flex;
 }
