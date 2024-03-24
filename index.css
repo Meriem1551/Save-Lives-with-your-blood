@@ -94,9 +94,9 @@ a:hover{
 .dropdown-content a:hover {background-color: var(--light-pink);}
 .sub-header:hover .dropdown-content {display: block;}
 
-main{
+/* main{
     padding: 20px 50px;
-}
+} */
 #landing{
     display: flex;
 }
@@ -148,4 +148,208 @@ main{
 position: absolute;
 left: 400px;
 top: 350px;
+}
+#Needer{
+    background-color: var(--white);
+    display: flex;
+    height: auto;
+    justify-content: space-evenly;
+}
+#Needer .benefit-item img{
+    height: 200px;
+    width: 200px;
+    animation: animeY 2s alternate;
+}
+
+ #Needer .benefit-item p{
+    font-family: var(--font-family-paragraphs);
+    font-weight: var(--font-weight-bold);
+    font-size: 17px;
+    text-align: center;
+    width: 180px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    animation: animeY 2s alternate;
+} 
+.Need {
+    font-family: var(--font-family-heading);
+    text-align: center;
+    color: var(--dark-blue);
+}
+#Needs-per-day{
+    background-color: var(--light-pink);
+    display: grid;
+    place-items: center;
+    height: auto;
+    
+}
+#Needs-per-day .bottles .bottle{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    animation: animeY 3s alternate;
+}
+#Needs-per-day h2{
+    font-family: var(--font-family-paragraphs);
+    font-weight: var(--font-weight-semiBold);
+    width: 700px;
+    text-align: center;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    animation: animeY 3s alternate;
+}
+#statics{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+}
+#statics .stat{
+    background-color: var(--red);
+    display: grid;
+    place-items: center;
+}
+#statics .stat img{
+    height: 340px;
+    width: 380px;
+    animation: animeX 3s alternate;
+}
+#statics .stat h2{
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-regular);
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    width: 300px;
+    margin-top: -20px;
+}
+#statics .heart{
+    display: grid;
+    place-items: center;
+}
+#statics .heart img{
+    height: 250px;
+    width: 250px;
+    animation: animeX 3s alternate;
+}
+#statics .heart h2{
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-regular);
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    width: 390px;
+}
+#How-to-donate{
+    display: grid;
+    background-color: var(--light-pink);   
+}
+#How-to-donate .steps{
+    display: flex;
+    height: auto;
+    justify-content: space-evenly;
+}
+ #How-to-donate h1{
+    font-family: var(--font-family-heading);
+    text-align: center;
+    color: var(--dark-blue);
+    margin-top: 20px;
+} 
+#How-to-donate .steps img{
+    height: 200px;
+    width: 200px;
+    animation: animeY 4s alternate;
+}
+ #How-to-donate .steps p{
+    font-family: var(--font-family-paragraphs);
+    font-weight: var(--font-weight-bold);
+    font-size: 17px;
+    text-align: center;
+    width: 180px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    animation: animeY 4s alternate;
+} 
+#importance{
+    display: flex;
+    background-color: var(--white);
+    justify-content: space-evenly; 
+}
+#importance img{
+    height: 260px;
+    width: 260px;
+    animation: animeX 4s alternate;
+}
+#importance h3{
+    font-family: var(--font-family-heading);
+    font-size: 24px;
+    font-weight: var(--font-weight-regular);
+    margin-top: 80px;
+    text-align: center;
+    color: var(--dark-blue);
+    width: 500px;
+}
+#about{
+    display: grid;
+    background-color: var(--light-pink);  
+}
+#about .why-us{
+    display: grid;
+    place-items: center;
+}
+#about .why-us h1{
+    font-family: var(--font-family-heading);
+    text-align: center;
+    color: var(--red);
+    margin-top: 20px;
+}
+#about .why-us p{
+    font-family: var(--font-family-paragraphs);
+    font-weight: var(--font-weight-bold);
+     font-size: 20px; 
+    text-align: center;
+    color: var(--dark-blue);
+    margin-top: 20px;
+    width: 800px;
+}
+#about .infos{
+    display: flex;
+   margin-top: 80px;
+    justify-content: space-evenly;
+}
+#about .infos h1{
+    font-family: var(--font-family-heading);
+    text-align: center;
+    color: var(--dark-blue);
+}
+#about .infos p{
+    font-family: var(--font-family-paragraphs);
+    font-weight: var(--font-weight-bold);
+    font-size: 17px; 
+    text-align: center;
+    color: var(--red);
+    margin-bottom: 20px;
+}
+#location {
+    display: flex;
+    justify-content: center;
+    background-color: var(--medium-pink);
+}
+#location iframe{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    height: 350px;
+    width: 500px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+@keyframes animeX {
+    from{
+        transform: translateX(-100px);
+    }
+}
+@keyframes animeY {
+    from{
+        transform: translateY(100px);
+    }
 }
