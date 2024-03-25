@@ -163,8 +163,8 @@ top: 350px;
     justify-content: space-evenly;
 }
 #Needer .benefit-item img{
-    height: 200px;
-    width: 200px;
+    height: 160px;
+    width: 160px;
     animation: animeY 2s alternate;
 }
 
@@ -263,8 +263,8 @@ top: 350px;
     margin-top: 20px;
 } 
 #How-to-donate .steps img{
-    height: 200px;
-    width: 200px;
+    height: 160px;
+    width: 160px;
     animation: animeY 4s alternate;
 }
  #How-to-donate .steps p{
@@ -364,4 +364,7 @@ top: 350px;
     display: flex;
     gap: 100px;
     justify-content: center;
+}
+#footer img{
+    cursor: pointer;
 }
