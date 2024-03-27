@@ -12,21 +12,23 @@
     <main>
       <div class="login_card">
         <h1>Welcome back!!</h1>
-        <form action="login.php" method="post">
-          <input type="text" id="username" placeholder="Username" required><br>
-          <input type="password" id="pass" placeholder="Password" required><br>
+        <form action="Donataire.php" method="POST">
+          <input type="text" name="username" placeholder="Username" required ><br>
+          <input type="password" name="passw" placeholder="Password" required><br>
           <input type="submit" value="Login"  class="btn">
         </form>
+        <form action="AdminLogin.html">
+            <input type="submit" value="Login as Admin" id="Admin" class="btn">
         </form>
       </div>
-      <div class="signup_suggest">
+      <div class="signin_suggest">
         <h2>New Here?</h2>
         <p>Sign up to get a huge
             amount of news and good 
            opportunities.
         </p>
-        <form action="signin.php" method="post">
-            <input type="submit" value="Signin" class="btn" id="btn2">
+        <form action="signIn.html">
+            <input type="submit" value="SignIn" class="btn" id="btn2">
         </form>
       </div>
     </main>

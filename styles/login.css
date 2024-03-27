@@ -13,7 +13,7 @@ main{
     box-shadow: 1px 1PX 5PX 3PX rgb(155, 115, 115);
     border-radius: 8px;
 }
-.signup_suggest{
+.signin_suggest{
     background-image: url(../assets/images/LOGIN/takingBlood.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -79,6 +79,7 @@ form>input{
 #btn2{
     margin-top: 120px;
 }
-
-
-
+#Admin{
+    width: 150px;
+    margin-top: -20px;
+}
