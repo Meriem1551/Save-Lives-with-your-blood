@@ -125,8 +125,8 @@ a:hover{
     font-size: 2.8rem;
     color: var(--red);
 }
-h1, p, .main-image, .blood-bag{
-    animation: anime 2s linear;
+h1, p{
+    animation: anime 1s linear;
 }
 @keyframes anime{
     from{
