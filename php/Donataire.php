@@ -36,7 +36,7 @@ function addUser($id, $sign_email,$sign_passw, $birthday, $typeBlood) {
         else{
             echo "<script>";
             echo "alert('User added successfully');";
-            echo "window.location.href='../pages/comments.php';";
+            echo "window.location.href='../php/comments.php';";
             echo "</script>";
         }
     }
@@ -57,7 +57,7 @@ if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
             if(isExiste($id, $login_email, $login_passw)){
                 echo "<script>";
                 echo "alert('Log in successfully');";
-                echo "window.location.href='../pages/comments.php';";
+                echo "window.location.href='../php/comments.php';";
                 echo "</script>";
             }
             else{
