@@ -67,4 +67,5 @@ option{
 .btn:hover{
     background-color: var(--dark-red);
     color: var(--white);
+    cursor: pointer;
 }
