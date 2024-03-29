@@ -11,7 +11,7 @@
     <header>
         <!--logo -->
         <nav>
-            <ul> <!-- position fix -->
+            <ul>
                 <li><a href="../index.html">Home</a></li>  
                 <li><a href="./pages/FAQ.html">FAQ</a></li>
             </ul>
@@ -21,5 +21,7 @@
     <!-- button to donation request -->
     
     <!-- comments of others and he can post a comment and see it -->
+
+    <!-- textarea for comment and it show the others comments -->
 </body>
 </html>
