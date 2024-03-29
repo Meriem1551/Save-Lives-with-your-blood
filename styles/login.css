@@ -75,6 +75,7 @@ form>input{
 .btn:hover{
     background-color: var(--dark-blue);
     color: var(--white);
+    cursor: pointer;
 }
 #btn2{
     margin-top: 120px;
@@ -82,4 +83,18 @@ form>input{
 #Admin{
     width: 150px;
     margin-top: -20px;
+}
+#forgetpw{
+    background-color: transparent;
+    border-bottom: none;
+    margin-top: -25px;
+    font-family: var(--font-family-paragraphs);
+    font-size: 17px;
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+#forgetpw:hover{
+    color: var(--red);
+    text-decoration: none;
+    cursor: pointer;
 }
