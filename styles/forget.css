@@ -1,0 +1,53 @@
+:root{
+    --light-pink:#fee5e5;
+    --medium-pink:#fed0d0;
+    --pink:#EFB3B4;
+    --red: #fc1b1b;
+    --dark-blue:#1E0377;
+    --white: white;
+    --dark-red:rgb(102, 2, 4);
+    --font-family-paragraphs :Truculenta;
+    --font-family-heading: Kanit;
+    --font-weight-regular: 400;
+    --font-weight-semiBold: 600;
+    --font-weight-bold: 700;
+    --font-size: 20px;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--medium-pink);
+    display: grid;
+    place-content: center;
+}
+main{
+    background-color: var(--dark-red);
+    font-family: var(--font-family-paragraphs);
+    font-weight: var(--font-weight-semiBold);
+    margin-top: 50%;
+}
+input{
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    border-bottom:2px solid var(--pink);
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+form{
+    margin: 40px;
+    display: grid;
+    place-content: center;
+}
+.btn{
+    padding: 10px;
+    margin-top: 30px;
+    border: 2px solid var(--pink);
+    color: var(--pink);
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color: var(--pink);
+    color: var(--dark-blue);
+}
