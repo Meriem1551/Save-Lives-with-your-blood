@@ -13,10 +13,10 @@
       <div class="signin_card">
         <h1>SIGN IN NOW!</h1>
         <form action="Donataire.php" method="POST">
-          <input type="text" name="username" placeholder="Username" required><br>
-          <input type="password" name="passw" placeholder="Password" required><br>
+          <input type="email" name="sign_email" placeholder="Email" required><br>
+          <input type="password" name="sign_passw" placeholder="Password" required><br>
           <input type="date" name="birthday" placeholder="Date of Birth"><br>
-          <select name="typeSang" id="" required>
+          <select name="typeBlood" id="" required>
             <option value="A+">A+</option>
             <option value="A-">A-</option>
             <option value="B+">B+</option>
@@ -26,8 +26,7 @@
             <option value="O+">O+</option>
             <option value="O-">O-</option>
           </select><br>
-          </select>
-          <input type="submit" value="Sign In"  class="btn">
+          <input type="submit" name="sign_in" value="Sign In"  class="btn">
         </form>
         <img src="../assets/images/Signin/—Pngtree—blood drop 3d icon health_8929242.png" alt="blood drop" width="200px">
       </div>
