@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/signUp.css">
-    <title>Blood Donate | Sign Up</title>
+    <title>Document</title>
 </head>
 <body>
-    <!-- submit button goes to donataire page -->
+    <!-- contains persons who registered and he can delete them or serch for them donation between 2 dates -->
 </body>
 </html>
