@@ -37,6 +37,7 @@ input{
     text-align: center;
     margin-top: 10px;
     color: var(--pink);
+    font-family: var(--font-family-heading);
 }
 input::placeholder{
     color: var(--pink);

@@ -35,6 +35,7 @@ form>input{
     margin-top: 10px;
     font-size: 15px;
     color: rgb(136, 133, 133);
+    font-family: var(--font-family-heading);
 }
 img{
     position: absolute;
