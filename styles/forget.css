@@ -3,6 +3,7 @@
     --medium-pink:#fed0d0;
     --pink:#EFB3B4;
     --red: #fc1b1b;
+    --medium-red: rgb(191, 2, 2);
     --dark-blue:#1E0377;
     --white: white;
     --dark-red:rgb(102, 2, 4);
@@ -21,10 +22,11 @@ body{
     place-content: center;
 }
 main{
-    background-color: var(--dark-red);
+    background-color: var(--medium-red);
     font-family: var(--font-family-paragraphs);
     font-weight: var(--font-weight-semiBold);
     margin-top: 50%;
+    border-radius: 10px;
 }
 input{
     font-size: 15px;
@@ -35,6 +37,10 @@ input{
     text-align: center;
     margin-top: 10px;
     color: var(--pink);
+}
+input::placeholder{
+    color: var(--pink);
+    font-size: 18px;
 }
 form{
     margin: 40px;
@@ -47,6 +53,7 @@ form{
     border: 2px solid var(--pink);
     color: var(--pink);
     border-radius: 10px;
+    font-size: 18px;
 }
 .btn:hover{
     background-color: var(--pink);
