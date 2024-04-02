@@ -17,7 +17,7 @@ function isExiste($id, $email, $passw){
     }
 }
 
-function addUser($id, $sign_email,$sign_passw, $birthday, $typeBlood) { 
+function addUser($id, $sign_email,$sign_passw, $birthday, $typeBlood, $phone_num) { 
     if(isExiste($id, $sign_email, $sign_passw)) {
         echo "<script>";
         echo "alert('This user is already existe. Try to login');";
@@ -25,9 +25,9 @@ function addUser($id, $sign_email,$sign_passw, $birthday, $typeBlood) {
         echo "</script>";
     }
     else{
-        $Insrequest = "insert into donataire values (?, ?, ?, ?)";
+        $Insrequest = "insert into donataire values (?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($id, $Insrequest);
-        mysqli_stmt_bind_param($stmt, "ssss", $sign_email, $sign_passw, $birthday, $typeBlood);
+        mysqli_stmt_bind_param($stmt, "sssss", $sign_email, $sign_passw, $birthday, $typeBlood, $phone_num);
         mysqli_stmt_execute($stmt);
         if(mysqli_stmt_affected_rows($stmt) <= 0){
             echo "<script>";
@@ -51,7 +51,8 @@ if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
             $sign_passw = $_POST['sign_passw'];
             $birthday = $_POST['birthday'];
             $typeBlood = $_POST['typeBlood'];
-            addUser($id, $sign_email, $sign_passw, $birthday, $typeBlood);
+            $phone_num = $POST['phone_num'];
+            addUser($id, $sign_email, $sign_passw, $birthday, $typeBlood, $phone_num);
         }
         else if(isset($_POST['login'])){
             $login_email = $_POST['login_email'];
