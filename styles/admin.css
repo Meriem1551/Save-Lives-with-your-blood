@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
+:root{
+    --light-pink:#fee5e5;
+    --medium-pink:#fed0d0;
+    --pink:#EFB3B4;
+    --red: #fc1b1b;
+    --medium-red:#ab0303;
+    --dark-blue:#1E0377;
+    --white: white;
+    --dark-red:rgb(102, 2, 4);
+    --font-family-paragraphs :Truculenta;
+    --font-family-heading: Kanit;
+    --font-weight-regular: 400;
+    --font-weight-semiBold: 600;
+    --font-weight-bold: 700;
+    --font-size: 20px;
+}
+body{
+    background-color: var(--pink);
+    display: grid;
+    place-content: center;
+}
+main{
+    padding: 50px;
+    font-family:var(--font-family-heading) ;
+    background-color: var(--medium-red);
+    color: var(--pink);
+    width: 400px;
+    border-radius: 10px;
+}
+input{
+    background-color: transparent;
+    width: 300px;
+    padding: 15px;
+    border: none;
+    border-bottom: var(--pink) solid 2px;
+    margin-bottom: 30px;
+    font-family:var(--font-family-heading) ;
+    font-size: var(--font-size);
+}
+h1{
+    text-align: center;
+    font-size: 3rem;
+}
+.btn{
+    width: 120px;
+    background-color: var(--pink);
+    margin-top: 20px;
+    color: var(--dark-red);
+    border-radius: 10px;
+    &:hover{
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid var(--pink);
+        color: var(--pink);
+    }
+}
