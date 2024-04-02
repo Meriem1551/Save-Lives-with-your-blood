@@ -9,5 +9,6 @@
 </head>
 <body>
     <!-- button returns to donataire page -->
+    <!-- input to choose the date when he donate -->
 </body>
 </html>

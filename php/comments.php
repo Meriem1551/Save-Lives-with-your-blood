@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/icons8-blood-drop-32.png">
     <link rel="stylesheet" href="../styles/donataire.css">
-    <title>Blood Donate | Donataire</title>
+    <title>Blood Donate | Add comment</title>
 </head>
 <body>
     <header>
@@ -14,14 +14,16 @@
             <ul>
                 <li><a href="../index.html">Home</a></li>  
                 <li><a href="./pages/FAQ.html">FAQ</a></li>
+                <li><a href="../php/profile.php">Profile</a></li> 
             </ul>
         </nav>
     </header>
     <!-- comments -->
     <!-- button to donation request -->
     
-    <!-- comments of others and he can post a comment and see it -->
+    <!-- textarea for comment-->
+    <!-- button to submit the comment -->
+    <!-- a div for comment contains email the comment, delte button i'll add the php so just add the div, -->
 
-    <!-- textarea for comment and it show the others comments -->
 </body>
 </html>
