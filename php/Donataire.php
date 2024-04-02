@@ -1,5 +1,7 @@
 <!-- adding a user if sign in or check for his existance for log in -->
 <?php 
+$login_email;
+
 //FUNCTIONS DEFINITION
 function isExiste($id, $email, $passw){
     $searchReq = "select * from donataire where email = ?  and password=?";
@@ -35,12 +37,13 @@ function addUser($id, $sign_email,$sign_passw, $birthday, $typeBlood) {
         }
         else{
             echo "<script>";
-            echo "alert('User added successfully');";
-            echo "window.location.href='../php/comments.php';";
+            echo "alert('User had been added successfully. Login now');";
+            echo "window.location.href='../pages/login.html';";
             echo "</script>";
         }
     }
 }
+function Connect(){
 // mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
     if( $id_db = mysqli_select_db($id, "hope_lab") ) {
@@ -63,7 +66,7 @@ if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
             else{
                 echo "<script>";
                 echo "alert('Incorrect email or password');";
-                echo "window.location.href='../pages/signIn.html';";
+                echo "window.location.href='../pages/login.html';";
                 echo "</script>";
             }
         }
@@ -76,4 +79,7 @@ if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
     else {
         die("Echec de connexion au serveur de base de données.");
     }
+}
+Connect();
 ?>
+
