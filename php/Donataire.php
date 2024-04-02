@@ -44,7 +44,6 @@ function addUser($id, $sign_email,$sign_passw, $birthday, $typeBlood) {
     }
 }
 function Connect(){
-// mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
     if( $id_db = mysqli_select_db($id, "hope_lab") ) {
         if(isset($_POST['sign_in'])){
@@ -58,10 +57,10 @@ if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
             $login_email = $_POST['login_email'];
             $login_passw = $_POST['login_passw'];
             if(isExiste($id, $login_email, $login_passw)){
-                echo "<script>";
-                echo "alert('Log in successfully');";
-                echo "window.location.href='../php/comments.php';";
-                echo "</script>";
+                session_start();
+                $_SESSION['login_email'] = $login_email;
+                header("Location: ../php/comments.php");
+                exit(); 
             }
             else{
                 echo "<script>";
