@@ -7,8 +7,65 @@
     <title>Blood Donate | Admin</title>
 </head>
 <body>
-    <!--  see all persons who donate
-       delete or search for a donataire 
-    -->
+
+
+  <div class="container">
+    <nav>
+      <ul>
+        <li>
+            <img src="../assets/images/admin/icons8-male-user-96.png" alt="">
+            <a  class="tab active" href="#profile">
+              <span class="nav-item ">Mon profile</span>
+            </a>
+        </li>
+        <li>
+            <img src="../assets/images/admin/icons8-messages-96.png" alt="">
+            <a  class="tab" href="#">
+              <span class="nav-item">Message</span>
+            </a>
+        </li>
+        <li>
+            <img src="../assets/images/admin/icons8-meeting-time-96.png" alt="">
+            <a  class="tab" href="#">
+              <span class="nav-item">Mes Rendez-vous</span>
+            </a>
+        </li>
+        <div class="setting">
+        <li>
+            <img src="../assets/images/admin/icons8-setting-96.png" alt="">
+            <a  class="tab" href="#">
+                <span  class="nav-item">Paramètre</span>
+            </a>
+          <div class="sub-menu">
+            <a href="" class="sub-item">Modifier mes informations</a>
+            <a href="" class="sub-item">Changer le mot de passe</a>
+          </div>
+        </li>
+        </div>
+        <li>
+            <img src="../assets/images/admin/icons8-log-out-96.png" alt="">
+            <a href="logout.php"  class="logout">
+               <span class="nav-item" name >Déconnecter</span>
+            </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="profile " id="profile" >
+        <img src="" alt="">
+        <form role="form" name="edit" method="post">
+            <div class="form-group">
+                <label for="first name">First Name:</label>
+                <input type="text" id="first name" value="John Doe" readonly>
+            </div>
+            <div class="form-group">
+                <label for="last name">last Name:</label>
+                <input type="text" id="last name" value="John Doe" readonly>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="johndoe@example.com" readonly>
+            </div>
+       </form>
+    </div>
 </body>
 </html>
