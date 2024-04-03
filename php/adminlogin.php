@@ -27,6 +27,7 @@ function connect($admin_email, $admin_passw){
         die("Echec de connexion au serveur de base de données.");
     }
 }
+
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,9 +49,11 @@ function connect($admin_email, $admin_passw){
             <input type="submit" name="login" value="Login" class="btn">
         </form>
         <?php
+        if(isset($_POST['login'])) {
             $admin_email = $_POST['admin_email'];
             $admin_passw = $_POST['admin_passw'];
             connect($admin_email,$admin_passw);
+        }
         ?>
     </main>
 
