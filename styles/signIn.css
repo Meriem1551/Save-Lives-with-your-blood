@@ -1,0 +1,70 @@
+.signup_bd{
+    padding: 0;
+    margin: 0;
+    background-color: var(--light-pink);
+    background-image: none;
+    display: grid;
+    place-content: center;
+
+}
+main{
+    display: flex;
+    background-image: linear-gradient(45deg, rgb(161, 2, 2), pink, rgb(161, 1, 1));
+    margin: 50px;
+    box-shadow: 1px 1PX 5PX 3PX rgb(155, 115, 115);
+    border-radius: 8px;
+}
+.signin_card{
+padding: 80px;  
+text-align: center; 
+>h1{
+    animation: none;
+    font-family: var(--font-family-heading);
+    font-weight: var( --font-weight-bold);
+    font-size: 3rem;
+    color: var(--dark-red);
+};
+}
+form>input{
+    border: none;
+    border-bottom: 2px solid var(--dark-red);
+    background-color: transparent;
+    text-align: center;
+    padding: 10px;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: rgb(136, 133, 133);
+}
+img{
+    position: absolute;
+    top: 380px;
+    right: 340px;
+}
+select, option{
+    border: 2px solid var(--dark-red);
+    background-color: transparent;
+    text-align: center;
+    padding: 10px;
+    width: 200px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: var(--dark-red);
+}
+option{
+    background-color: var(--dark-red);
+    color: var(--white);
+}
+.btn{
+    border: 2px solid var(--dark-red);
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: var(--font-family-paragraphs);
+    font-size: 20px;
+    color: var(--dark-red);
+}
+.btn:hover{
+    background-color: var(--dark-red);
+    color: var(--white);
+}

@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/icons8-blood-drop-32.png">
     <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../index.css">
     <title>Blood Donate | Login</title>
 </head>
 <body>
+<body class="login_bd">
+    <main>
+      <div class="login_card">
+        <h1>Welcome back!!</h1>
+        <form action="Donataire.php" method="POST">
+          <input type="text" name="username" placeholder="Username" required ><br>
+          <input type="password" name="passw" placeholder="Password" required><br>
+          <input type="submit" value="Login"  class="btn">
+        </form>
+        <form action="AdminLogin.html">
+            <input type="submit" value="Login as Admin" id="Admin" class="btn">
+        </form>
+      </div>
+      <div class="signin_suggest">
+        <h2>New Here?</h2>
+        <p>Sign up to get a huge
+            amount of news and good 
+           opportunities.
+        </p>
+        <form action="signIn.html">
+            <input type="submit" value="SignIn" class="btn" id="btn2">
+        </form>
+      </div>
+    </main>
     <!-- button goes to sign up -->
     <!-- button for login as admin -->
     <!-- or submit button goes to donataire page -->

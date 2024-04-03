@@ -2,9 +2,11 @@
 :root{
     --light-pink:#fee5e5;
     --medium-pink:#fed0d0;
+    --pink:#EFB3B4;
     --red: #fc1b1b;
     --dark-blue:#1E0377;
     --white: white;
+    --dark-red:rgb(102, 2, 4);
     --font-family-paragraphs :Truculenta;
     --font-family-heading: Kanit;
     --font-weight-regular: 400;
