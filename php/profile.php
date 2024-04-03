@@ -66,7 +66,7 @@
                     die('Echec de connexion au serveur');
                 }
             ?>
-            <li><a href="../pages/editData.html">Edit</a></li>
+            <a href="../pages/editData.html">Edit</a>
         </div>
 
         <div id="AlertBox" class="alert">
