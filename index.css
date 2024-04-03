@@ -14,9 +14,6 @@
     --font-weight-bold: 700;
     --font-size: 20px;
 }
-/* header, main{
-    background-image: linear-gradient(to right, var(--light-pink), var(--medium-pink));
-} */
 *{
     margin: 0;
     padding: 0;
