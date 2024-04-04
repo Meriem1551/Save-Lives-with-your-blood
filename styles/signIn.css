@@ -29,12 +29,11 @@ form>input{
     border: none;
     border-bottom: 2px solid var(--dark-red);
     background-color: transparent;
-    
     padding: 10px;
     width: 200px;
     margin-top: 10px;
     font-size: 15px;
-    color: rgb(136, 133, 133);
+    color: var(--white);
     font-family: var(--font-family-heading);
 }
 img{
