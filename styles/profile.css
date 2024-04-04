@@ -60,3 +60,10 @@ ul{
     background-color: transparent;
     border: none;
 }
+.edit_profile{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+/* rest of css for profile page */
