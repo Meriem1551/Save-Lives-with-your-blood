@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/icons8-blood-drop-32.png">
+    <link rel="stylesheet" href="../styles/adminPage.css">
     <title>Admin page</title>
 </head>
 <body>
     <main>
+        <button onclick="showSearchBloc()">search</button>
+
+        <div id="search_box">
+            <h2>Search for a Donataire: </h2><br/>
+            <form action="" method="post">
+                <input type="date" name="first_date"  required><br>
+                <input type="date" name= "second_date" required><br>
+                <div id="buttons">
+                    <input type="submit" name='search' value='search'>
+                    <button onclick="hideSearchBloc()">Cancel</button>
+                </div>
+            </form>
+        </div>
         <!-- contains persons who registered and he can delete them or serch for them donation between 2 dates -->
         <h1>
             <!-- find a title for that page or just remove it -->
@@ -57,5 +71,13 @@
         ?>
         </div>
     </main>
+    <script>
+        function showSearchBloc(){
+            document.getElementById('search_box').style.display = "block";
+        }
+        function hideSearchBloc(){
+            document.getElementById('search_box').style.display = "none";
+        }
+    </script>
 </body>
 </html>
