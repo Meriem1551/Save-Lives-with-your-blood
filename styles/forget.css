@@ -1,12 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
 :root{
-    --light-pink:#fee5e5;
     --medium-pink:#fed0d0;
     --pink:#EFB3B4;
-    --red: #fc1b1b;
     --medium-red: rgb(191, 2, 2);
     --dark-blue:#1E0377;
-    --white: white;
-    --dark-red:rgb(102, 2, 4);
     --font-family-paragraphs :Truculenta;
     --font-family-heading: Kanit;
     --font-weight-regular: 400;
@@ -23,10 +20,13 @@ body{
 }
 main{
     background-color: var(--medium-red);
-    font-family: var(--font-family-paragraphs);
-    font-weight: var(--font-weight-semiBold);
     margin-top: 50%;
     border-radius: 10px;
+}
+form{
+    margin: 40px;
+    display: grid;
+    place-content: center;
 }
 input{
     font-size: 15px;
@@ -42,11 +42,6 @@ input{
 input::placeholder{
     color: var(--pink);
     font-size: 18px;
-}
-form{
-    margin: 40px;
-    display: grid;
-    place-content: center;
 }
 .btn{
     padding: 10px;
