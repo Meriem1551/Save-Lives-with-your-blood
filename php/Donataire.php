@@ -25,7 +25,7 @@ function addUser($id, $sign_email,  $sign_passw, $family_name,  $first_name, $bi
         echo "</script>";
     }
     else{
-        $Insrequest = "insert into donataire values (?, ?, ?, ?, ?, ?, ?)";
+        $Insrequest = "insert into donataire (email, password, family_name, first_name, Birth_day, typeBlood, Phone_num) values (?, ?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($id, $Insrequest);
         mysqli_stmt_bind_param($stmt, "sssssss", $sign_email, $sign_passw,  $family_name, $first_name, $birthday, $typeBlood, $phone_num);
         mysqli_stmt_execute($stmt);
