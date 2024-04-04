@@ -30,10 +30,18 @@
                                 echo"<div>".$row['first_name']."</div>";
                                 echo"<div>"."0".$row['Phone_num']."</div>";
                                 echo"<form action='' method='post'>";
-                                    echo"<input type='submit' value='Delete'>";
-                                echo"</input>";
-                                // login for delete user
+                                    echo "<input type='hidden' name='email' value='". $row['email']."'>";
+                                    echo"<input type='submit' value='Delete' name='delete'>";
+                                echo"</form>";
                             echo"</div>";
+                        }
+                        if(isset($_POST['delete'])) { 
+                            $email = $_POST['email'];
+                            $req = "delete from donataire where email= ?";
+                            $stmt = mysqli_prepare($id, $req);
+                            mysqli_stmt_bind_param($stmt,"s", $email);
+                            mysqli_stmt_execute($stmt);
+                            header('Location: ../php/AdminPage.php');
                         }
                         // add the appropriate infos
                     }
