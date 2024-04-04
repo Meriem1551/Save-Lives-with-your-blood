@@ -10,11 +10,12 @@
 <body>
     <main>
         <button onclick="showSearchBloc()">search</button>
-
         <div id="search_box">
             <h2>Search for a Donataire: </h2><br/>
             <form action="" method="post">
+                <label for="first_date">Start Date:</label><br>
                 <input type="date" name="first_date"  required><br>
+                <label for="second_date">End Date:</label><br>
                 <input type="date" name= "second_date" required><br>
                 <div id="buttons">
                     <input type="submit" name='search' value='search'>
@@ -56,8 +57,35 @@
                             mysqli_stmt_bind_param($stmt,"s", $email);
                             mysqli_stmt_execute($stmt);
                             header('Location: ../php/AdminPage.php');
+                            exit;
                         }
-                        // add the appropriate infos
+                        //search for user
+                        if (isset($_POST['search'])) {
+                            $startDate = $_POST['first_date'];
+                            $endDate = $_POST['second_date'];
+                            $req = "select * from donataire where donation_date between ? and ?";
+                            $stmt = mysqli_prepare($id, $req);
+                            mysqli_stmt_bind_param($stmt, 'ss', $startDate, $endDate);
+                            mysqli_stmt_execute($stmt);
+                            $dates = mysqli_stmt_get_result($stmt);
+                            if(mysqli_num_rows($dates) <= 0){
+                                echo"No data";
+                            }
+                            else{
+                                while($row = mysqli_fetch_assoc($dates)){
+                                    echo"<div class='singl_user'>";
+                                        echo"<div>".$row['email']."</div>";
+                                        echo"<div>".$row['family_name']."</div>";
+                                        echo"<div>".$row['first_name']."</div>";
+                                        echo"<div>"."0".$row['Phone_num']."</div>";
+                                        echo"<form action='' method='post'>";
+                                            echo "<input type='hidden' name='email' value='". $row['email']."'>";
+                                            echo"<input type='submit' value='Delete' name='delete'>";
+                                        echo"</form>";
+                                    echo"</div>";
+                                }
+                            }
+                        }
                     }
                 }
                 else{
