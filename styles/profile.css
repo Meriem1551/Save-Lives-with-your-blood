@@ -38,6 +38,7 @@ ul{
 .alert{
     display: none;
     position: fixed;
+    top: 150px;
     left: 430px; 
     background-color: var(--medium-red); 
     color:  rgb(251, 184, 180);
