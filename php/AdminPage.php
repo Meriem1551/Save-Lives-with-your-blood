@@ -6,6 +6,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/icons8-blood-drop-32.png">
     <link rel="stylesheet" href="../styles/adminPage.css">
     <title>Admin page</title>
+    <style>
+    .single_user1 {
+        display: block;
+        margin-bottom: 10px;
+        background-color:red;
+        color: white;
+    }
+    </style>
 </head>
 <body>
     <main>
@@ -18,9 +26,9 @@
                 <label for="second_date">End Date:</label><br>
                 <input type="date" name= "second_date" required><br>
                 <div id="buttons">
-                    <input type="submit" name='search' value='search'>
+                    <input type="submit" name='search' value='search'/>
                     <button onclick="hideSearchBloc()">Cancel</button>
-                </div>
+                </div> 
             </form>
         </div>
         <!-- contains persons who registered and he can delete them or serch for them donation between 2 dates -->
@@ -38,8 +46,9 @@
                         echo"Empty data base";
                     }
                     else{
+                        echo"<h2>Our clients</h2>";
                         while($row = mysqli_fetch_assoc($result)){
-                            echo"<div class='singl_user'>";
+                            echo"<div class='single_user'>";
                                 echo"<div>".$row['email']."</div>";
                                 echo"<div>".$row['family_name']."</div>";
                                 echo"<div>".$row['first_name']."</div>";
@@ -72,18 +81,27 @@
                                 echo"No data";
                             }
                             else{
-                                while($row = mysqli_fetch_assoc($dates)){
-                                    echo"<div class='singl_user'>";
-                                        echo"<div>".$row['email']."</div>";
-                                        echo"<div>".$row['family_name']."</div>";
-                                        echo"<div>".$row['first_name']."</div>";
-                                        echo"<div>"."0".$row['Phone_num']."</div>";
-                                        echo"<form action='' method='post'>";
-                                            echo "<input type='hidden' name='email' value='". $row['email']."'>";
-                                            echo"<input type='submit' value='Delete' name='delete'>";
-                                        echo"</form>";
-                                    echo"</div>";
-                                }
+                                echo"<div id='result_search'>";
+                                    echo"<h2>Donataire between $startDate and $endDate </h2>";
+                                    while($row = mysqli_fetch_assoc($dates)){
+                                        echo"<div class='single_user'>";
+                                            echo"<div>".$row['email']."</div>";
+                                            echo"<div>".$row['family_name']."</div>";
+                                            echo"<div>".$row['first_name']."</div>";
+                                            echo"<div>"."0".$row['Phone_num']."</div>";
+                                            echo"<form action='' method='post'>";
+                                                echo "<input type='hidden' name='email' value='". $row['email']."'>";
+                                                echo"<input type='submit' value='Delete' name='delete'>";
+                                            echo"</form>";
+                                        echo"</div>";
+                                    }
+                                    echo"<button onclick='hideDonataire()'>Hide Donataire</button>";
+                                echo"</div>";
+                                echo"<script>";
+                                        echo"function hideDonataire(){
+                                             document.getElementById('result_search').style.display = 'none';
+                                        }";
+                                echo"</script>";
                             }
                         }
                     }
