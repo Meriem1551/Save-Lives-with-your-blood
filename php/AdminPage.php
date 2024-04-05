@@ -32,7 +32,7 @@
         <?php
             if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
                 if( $id_db = mysqli_select_db($id, "hope_lab") ) {
-                    $get_data = "select * from donataire order by family_name"; 
+                    $get_data = "select * from users order by family_name"; 
                     $result = mysqli_query($id, $get_data);
                     if(mysqli_num_rows($result) <= 0){
                         echo"Empty data base";
@@ -52,7 +52,7 @@
                         }
                         if(isset($_POST['delete'])) { 
                             $email = $_POST['email'];
-                            $req = "delete from donataire where email= ?";
+                            $req = "delete from users where email= ?";
                             $stmt = mysqli_prepare($id, $req);
                             mysqli_stmt_bind_param($stmt,"s", $email);
                             mysqli_stmt_execute($stmt);
@@ -63,7 +63,7 @@
                         if (isset($_POST['search'])) {
                             $startDate = $_POST['first_date'];
                             $endDate = $_POST['second_date'];
-                            $req = "select * from donataire where donation_date between ? and ?";
+                            $req = "select * from users where donation_date between ? and ?";
                             $stmt = mysqli_prepare($id, $req);
                             mysqli_stmt_bind_param($stmt, 'ss', $startDate, $endDate);
                             mysqli_stmt_execute($stmt);

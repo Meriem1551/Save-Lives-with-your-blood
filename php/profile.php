@@ -50,7 +50,7 @@
                         session_start();
                         if(isset($_SESSION['login_email'])) {
                             $email = $_SESSION['login_email'];
-                            $searchReq = "select * from donataire where email = ?";
+                            $searchReq = "select * from users where email = ?";
                             $stmt = mysqli_prepare($id, $searchReq);
                             mysqli_stmt_bind_param($stmt, "s", $email);
                             mysqli_stmt_execute($stmt);
@@ -69,14 +69,14 @@
                             //DELETING USER
                             if(isset($_POST['confirm'])){
                                 $email = $_SESSION['login_email'];
-                                $Deletereq = "delete from donataire where email=?";
+                                $Deletereq = "delete from users where email=?";
                                 $delStmt = mysqli_prepare($id,$Deletereq);
                                 mysqli_stmt_bind_param($delStmt,"s",$email);
                                 mysqli_stmt_execute($delStmt);
                                 header("Location: ../index.html"); 
                                 exit;
                             }
-                            //Update date
+                            //Update data
                             if(isset($_POST['done'])){
                                 $user_email = $_SESSION['login_email'];
                                 $family_n = $_POST['family_name'];

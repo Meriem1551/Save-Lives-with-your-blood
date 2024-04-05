@@ -4,7 +4,7 @@ $login_email;
 
 //FUNCTIONS DEFINITION
 function isExiste($id, $email, $passw){
-    $searchReq = "select * from donataire where email = ?  and password=?";
+    $searchReq = "select * from users where email = ?  and password=?";
     $stmt = mysqli_prepare($id, $searchReq);
     mysqli_stmt_bind_param($stmt, "ss", $email, $passw);
     mysqli_stmt_execute($stmt);
@@ -25,7 +25,7 @@ function addUser($id, $sign_email,  $sign_passw, $family_name,  $first_name, $bi
         echo "</script>";
     }
     else{
-        $Insrequest = "insert into donataire (email, password, family_name, first_name, Birth_day, typeBlood, Phone_num) values (?, ?, ?, ?, ?, ?, ?)";
+        $Insrequest = "insert into users (email, password, family_name, first_name, Birth_day, typeBlood, Phone_num) values (?, ?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($id, $Insrequest);
         mysqli_stmt_bind_param($stmt, "sssssss", $sign_email, $sign_passw,  $family_name, $first_name, $birthday, $typeBlood, $phone_num);
         mysqli_stmt_execute($stmt);
