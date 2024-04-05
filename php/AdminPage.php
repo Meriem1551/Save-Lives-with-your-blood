@@ -46,7 +46,7 @@
                         echo"Empty data base";
                     }
                     else{
-                        echo"<h2>Our clients</h2>";
+                        echo"<h2>All Donataires</h2>";
                         while($row = mysqli_fetch_assoc($result)){
                             echo"<div class='single_user'>";
                                 echo"<div>".$row['email']."</div>";
