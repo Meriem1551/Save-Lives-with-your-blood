@@ -24,6 +24,7 @@
     <!-- textarea for comment-->
     <!-- button to submit the comment -->
     <!-- a div for comment contains email the comment, delte button i'll add the php so just add the div, -->
+    <a href="../php/Donerequest.php">Donate</a>
 
 </body>
 </html>
