@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../index.css">
     <title>Blood Donate | Login</title>
 </head>
+<body>
 <body class="login_bd">
     <main>
       <div class="login_card">
@@ -16,11 +17,9 @@
           <input type="email" name="login_email" placeholder="Email" required ><br>
           <input type="password" name="login_passw" placeholder="Password" required><br>
           <input type="submit" name="login" value="Login"  class="btn">
-        </form>
-        <form action="forgetpw.html">
-          <input type="submit" value="forget password?" id="forgetpw">
-        </form>
-        <form action="adminRequest.html">
+        </form><br>
+        <a href="forgetpw.html" id="forgetpw">forget password?</a><br>
+        <form action="../php/adminlogin.php">
             <input type="submit" value="Login as Admin" id="Admin" class="btn">
         </form>
       </div>
@@ -31,7 +30,7 @@
            opportunities.
         </p>
         <form action="signIn.html">
-            <input type="submit" value="Sign UP" class="btn" id="btn2">
+            <input type="submit" value="Sign UP" class="btn">
         </form>
       </div>
     </main>

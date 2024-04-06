@@ -1,17 +1,17 @@
 .login_bd{
     padding: 0;
     margin: 0;
-    background-color: var(--pink);
+    background-color: rgb(102, 2, 4);
     background-image: none;
     display: grid;
     place-content: center;
 }
 main{
     display: flex;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(214, 211, 211, 0.233);
     margin: 50px;
-    box-shadow: 1px 1PX 5PX 3PX rgb(155, 115, 115);
-    border-radius: 8px;
+    box-shadow: 1px 3PX 5PX 3PX rgba(2, 2, 2, 0.575);
+    border-radius: 10px;
 }
 .signin_suggest{
     background-image: url(../assets/images/LOGIN/takingBlood.jpg);
@@ -20,26 +20,29 @@ main{
     background-position: right;
     padding: 80px;  
     text-align: center;
-    color: var(--dark-blue);
+    color: black;
     width: 300px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     >p{
         animation: 0;
         font-family: var(--font-family-paragraphs);
         font-weight: var(--font-weight-regular);
         font-size: var(--font-size);
+        position: relative;
+        top: 50px;
     };
     >h2{
         font-family: var(--font-family-heading);
         font-weight: var( --font-weight-bold);
         font-size: 2rem;
+        position: relative;
+        top: 50px;
     };
 }
 
 .login_card{
-    padding: 80px;  
+    padding: 60px;  
     text-align: center; 
     width: 50%;
     >h1{
@@ -47,7 +50,7 @@ main{
         font-family: var(--font-family-heading);
         font-weight: var( --font-weight-bold);
         font-size: 3rem;
-        color: var(--dark-blue)
+        color: black
     };
 }
 form{
@@ -55,48 +58,51 @@ form{
 }
 form>input{
     border: none;
-    border-bottom: 2px solid var(--dark-blue);
+    border-bottom: 2px solid black;
     background-color: transparent;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     width: 200px;
     margin-top: 10px;
     font-size: 15px;
     font-family: var(--font-family-heading);
-    color: var(--dark-blue);
+    color: black;
 }
 .btn{
-    border: 2px solid var(--dark-blue);
-    width: 100px;
+    border: 2px solid black;
+    width: 140px;
     margin-top: 50px;
     border-radius: 5px;
     font-family: var(--font-family-paragraphs);
     font-size: 20px;
-    color: var(--dark-blue);
+    color: black;
+    transition: .3s;
 }
 .btn:hover{
-    background-color: var(--dark-blue);
+    background-color: black;
     color: var(--white);
     cursor: pointer;
 }
-#btn2{
-    margin-top: 120px;
-}
 #Admin{
-    width: 150px;
-    margin-top: -20px;
+    padding:5px;
+    margin-top: -50px;
 }
-#forgetpw{
+a{
     background-color: transparent;
     border-bottom: none;
-    margin-top: -25px;
     font-family: var(--font-family-paragraphs);
     font-size: 17px;
-    color: var(--dark-blue);
-    text-decoration: underline;
+    color: black;
+    margin-top: -50px; 
+    display: inline-block;
+    transition:  .3s ;
 }
-#forgetpw:hover{
-    color: var(--red);
-    text-decoration: none;
+#forgetpw{
+    text-decoration: underline;
+    color: black;
+}
+#forgetpw:hover {
+    color: white;
+    text-decoration: underline;
     cursor: pointer;
 }

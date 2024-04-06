@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
+:root{
+    --light-pink:#fee5e5;
+    --medium-pink:#fed0d0;
+    --pink:#EFB3B4;
+    --red: #fc1b1b;
+    --dark-blue:#1E0377;
+    --white: white;
+    --medium-red:rgb(171, 4, 6);
+    --dark-red:rgb(102, 2, 4);
+    --font-family-paragraphs :Truculenta;
+    --font-family-heading: Kanit;
+    --font-weight-regular: 400;
+    --font-weight-semiBold: 600;
+    --font-weight-bold: 700;
+    --font-size: 18px;
+}
+body{
+    background-image: url(../assets/images/Profile/Background.png);
+}
+header{
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+}
+header>img{
+    margin-right: auto;
+}
+header>nav>ul{
+    display: flex;
+    list-style: none;
+    gap: 100px;
+}
+ul{
+    right: auto;
+}
+
+.alert{
+    display: none;
+    position: fixed;
+    top: 150px;
+    left: 430px; 
+    background-color: var(--medium-red); 
+    color:  rgb(251, 184, 180);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-semiBold);
+}
+#buttons{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    column-gap: 30px;
+}
+#buttons>button, form>input{
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size);
+    color: var(--medium-pink);
+    background-color: transparent;
+    border: none;
+}
+.edit_profile{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+/* rest of css for profile page */

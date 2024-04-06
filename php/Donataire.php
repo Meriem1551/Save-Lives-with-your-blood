@@ -1,8 +1,10 @@
 <!-- adding a user if sign in or check for his existance for log in -->
 <?php 
+$login_email;
+
 //FUNCTIONS DEFINITION
 function isExiste($id, $email, $passw){
-    $searchReq = "select * from donataire where email = ?  and password=?";
+    $searchReq = "select * from users where email = ?  and password=?";
     $stmt = mysqli_prepare($id, $searchReq);
     mysqli_stmt_bind_param($stmt, "ss", $email, $passw);
     mysqli_stmt_execute($stmt);
@@ -15,7 +17,7 @@ function isExiste($id, $email, $passw){
     }
 }
 
-function addUser($id, $sign_email,$sign_passw, $birthday, $typeBlood) { 
+function addUser($id, $sign_email,  $sign_passw, $family_name,  $first_name, $birthday, $typeBlood, $phone_num) { 
     if(isExiste($id, $sign_email, $sign_passw)) {
         echo "<script>";
         echo "alert('This user is already existe. Try to login');";
@@ -23,9 +25,9 @@ function addUser($id, $sign_email,$sign_passw, $birthday, $typeBlood) {
         echo "</script>";
     }
     else{
-        $Insrequest = "insert into donataire values (?, ?, ?, ?)";
+        $Insrequest = "insert into users (email, password, family_name, first_name, Birth_day, typeBlood, Phone_num) values (?, ?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($id, $Insrequest);
-        mysqli_stmt_bind_param($stmt, "ssss", $sign_email, $sign_passw, $birthday, $typeBlood);
+        mysqli_stmt_bind_param($stmt, "sssssss", $sign_email, $sign_passw,  $family_name, $first_name, $birthday, $typeBlood, $phone_num);
         mysqli_stmt_execute($stmt);
         if(mysqli_stmt_affected_rows($stmt) <= 0){
             echo "<script>";
@@ -35,35 +37,38 @@ function addUser($id, $sign_email,$sign_passw, $birthday, $typeBlood) {
         }
         else{
             echo "<script>";
-            echo "alert('User added successfully');";
-            echo "window.location.href='../php/comments.php';";
+            echo "alert('User had been added successfully. Login now');";
+            echo "window.location.href='../pages/login.html';";
             echo "</script>";
         }
     }
 }
-// mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+function Connect(){
 if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
     if( $id_db = mysqli_select_db($id, "hope_lab") ) {
         if(isset($_POST['sign_in'])){
             $sign_email = $_POST['sign_email']; 
             $sign_passw = $_POST['sign_passw'];
+            $family_name = $_POST['family_name'];
+            $first_name = $_POST['first_name'];
             $birthday = $_POST['birthday'];
             $typeBlood = $_POST['typeBlood'];
-            addUser($id, $sign_email, $sign_passw, $birthday, $typeBlood);
+            $phone_num = $_POST['phone_num'];
+            addUser($id, $sign_email, $sign_passw, $family_name,  $first_name, $birthday, $typeBlood, $phone_num);
         }
         else if(isset($_POST['login'])){
             $login_email = $_POST['login_email'];
             $login_passw = $_POST['login_passw'];
             if(isExiste($id, $login_email, $login_passw)){
-                echo "<script>";
-                echo "alert('Log in successfully');";
-                echo "window.location.href='../php/comments.php';";
-                echo "</script>";
+                session_start();
+                $_SESSION['login_email'] = $login_email;
+                header("Location: ../php/comments.php");
+                exit(); 
             }
             else{
                 echo "<script>";
                 echo "alert('Incorrect email or password');";
-                echo "window.location.href='../pages/signIn.html';";
+                echo "window.location.href='../pages/login.html';";
                 echo "</script>";
             }
         }
@@ -76,4 +81,7 @@ if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
     else {
         die("Echec de connexion au serveur de base de données.");
     }
+}
+Connect();
 ?>
+
