@@ -11,7 +11,7 @@ main{
     background-color: rgba(255, 255, 255, 0.4);
     margin: 50px;
     box-shadow: 1px 1PX 5PX 3PX rgb(155, 115, 115);
-    border-radius: 8px;
+    border-radius: 30px;
 }
 .signin_suggest{
     background-image: url(../assets/images/LOGIN/takingBlood.jpg);
@@ -22,24 +22,27 @@ main{
     text-align: center;
     color: var(--dark-blue);
     width: 300px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     >p{
         animation: 0;
         font-family: var(--font-family-paragraphs);
         font-weight: var(--font-weight-regular);
         font-size: var(--font-size);
+        position: relative;
+        top: 50px;
     };
     >h2{
         font-family: var(--font-family-heading);
         font-weight: var( --font-weight-bold);
         font-size: 2rem;
+        position: relative;
+        top: 50px;
     };
 }
 
 .login_card{
-    padding: 80px;  
+    padding: 60px;  
     text-align: center; 
     width: 50%;
     >h1{
@@ -58,28 +61,47 @@ form>input{
     border-bottom: 2px solid var(--dark-blue);
     background-color: transparent;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     width: 200px;
     margin-top: 10px;
     font-size: 15px;
+    font-family: var(--font-family-heading);
+    color: var(--dark-blue);
 }
 .btn{
     border: 2px solid var(--dark-blue);
-    width: 100px;
+    width: 140px;
     margin-top: 50px;
     border-radius: 5px;
     font-family: var(--font-family-paragraphs);
     font-size: 20px;
     color: var(--dark-blue);
+    transition: .3s;
 }
 .btn:hover{
     background-color: var(--dark-blue);
     color: var(--white);
-}
-#btn2{
-    margin-top: 120px;
+    cursor: pointer;
 }
 #Admin{
-    width: 150px;
-    margin-top: -20px;
+    padding:5px;
+    margin-top: -50px;
+}
+a{
+    background-color: transparent;
+    border-bottom: none;
+    font-family: var(--font-family-paragraphs);
+    font-size: 17px;
+    color: var(--dark-blue);
+    margin-top: -50px; 
+    display: inline-block;
+    transition:  .3s ;
+}
+#forgetpw{
+    text-decoration: underline;
+}
+a:hover{
+    color: var(--red);
+    text-decoration: none;
+    cursor: pointer;
 }

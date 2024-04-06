@@ -14,9 +14,6 @@
     --font-weight-bold: 700;
     --font-size: 20px;
 }
-/* header, main{
-    background-image: linear-gradient(to right, var(--light-pink), var(--medium-pink));
-} */
 *{
     margin: 0;
     padding: 0;
@@ -27,12 +24,14 @@ body{
    background-size:100%;
 }
 #header{
+    background-image: linear-gradient(45deg, var(--light-pink),var(--medium-pink), var(--pink)) ;
     display: flex;
     justify-content: end;
-    padding: 25px;
+    padding: 10px;
     position:sticky;
     top: 0px;
     align-items: center;
+    z-index: 999;
 }
 ul{
     list-style-type: none;
@@ -99,6 +98,7 @@ a:hover{
 
 #landing{
     display: flex;
+    margin-top: 50px;
 }
 .main-image{
     width: 33%;
@@ -125,8 +125,8 @@ a:hover{
     font-size: 2.8rem;
     color: var(--red);
 }
-h1, p, .main-image, .blood-bag{
-    animation: anime 2s linear;
+h1, p{
+    animation: anime 1s linear;
 }
 @keyframes anime{
     from{

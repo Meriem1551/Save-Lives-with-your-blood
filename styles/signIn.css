@@ -29,16 +29,16 @@ form>input{
     border: none;
     border-bottom: 2px solid var(--dark-red);
     background-color: transparent;
-    text-align: center;
     padding: 10px;
     width: 200px;
     margin-top: 10px;
     font-size: 15px;
-    color: rgb(136, 133, 133);
+    color: var(--white);
+    font-family: var(--font-family-heading);
 }
 img{
     position: absolute;
-    top: 380px;
+    top: 450px;
     right: 340px;
 }
 select, option{
@@ -67,4 +67,5 @@ option{
 .btn:hover{
     background-color: var(--dark-red);
     color: var(--white);
+    cursor: pointer;
 }
