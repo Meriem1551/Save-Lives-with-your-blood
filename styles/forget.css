@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
 :root{
+    --light-pink:#fee5e5;
     --medium-pink:#fed0d0;
     --pink:#EFB3B4;
     --medium-red: rgb(191, 2, 2);
@@ -14,7 +15,7 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: var(--medium-pink);
+    background-color: var(--light-pink);
     display: grid;
     place-content: center;
 }
@@ -32,27 +33,28 @@ input{
     font-size: 15px;
     background-color: transparent;
     border: none;
-    border-bottom:2px solid var(--pink);
+    border-bottom:2px solid black;
     padding: 15px;
     text-align: center;
     margin-top: 10px;
-    color: var(--pink);
+    color: black;
     font-family: var(--font-family-heading);
 }
 input::placeholder{
-    color: var(--pink);
-    font-size: 18px;
+    color: gray;
+    font-weight: var(--font-weight-bold);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .btn{
     padding: 10px;
     margin-top: 30px;
-    border: 2px solid var(--pink);
-    color: var(--pink);
+    border: 2px solid black;
+    color: varblack;
     border-radius: 10px;
     font-size: 18px;
 }
 .btn:hover{
-    background-color: var(--pink);
-    color: var(--dark-blue);
+    background-color: black;
+    color: white;
     cursor: pointer;
 }

@@ -1,7 +1,7 @@
 .signup_bd{
     padding: 0;
     margin: 0;
-    background-color: var(--light-pink);
+    background-color: rgba(0, 0, 0, 0.959);
     background-image: none;
     display: grid;
     place-content: center;
@@ -11,7 +11,7 @@ main{
     display: flex;
     background-image: linear-gradient(45deg, rgb(161, 2, 2), pink, rgb(161, 1, 1));
     margin: 50px;
-    box-shadow: 1px 1PX 5PX 3PX rgb(155, 115, 115);
+    box-shadow: 1px 1PX 5PX 3PX rgba(139, 69, 69, 0.87);
     border-radius: 8px;
 }
 .signin_card{
@@ -22,19 +22,19 @@ text-align: center;
     font-family: var(--font-family-heading);
     font-weight: var( --font-weight-bold);
     font-size: 3rem;
-    color: var(--dark-red);
+    color: black;
 };
 }
 form>input{
     border: none;
-    border-bottom: 2px solid var(--dark-red);
+    border-bottom: 2px solid black;
     background-color: transparent;
     padding: 10px;
     width: 200px;
     margin-top: 10px;
     font-size: 15px;
-    color: var(--white);
-    font-family: var(--font-family-heading);
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 img{
     position: absolute;
@@ -42,30 +42,31 @@ img{
     right: 340px;
 }
 select, option{
-    border: 2px solid var(--dark-red);
+    border: 2px solid black;
     background-color: transparent;
     text-align: center;
     padding: 10px;
     width: 200px;
     margin-top: 20px;
     font-size: 15px;
-    color: var(--dark-red);
+    color: black;
 }
 option{
     background-color: var(--dark-red);
     color: var(--white);
 }
 .btn{
-    border: 2px solid var(--dark-red);
+    border: 2px solid black;
     width: 100px;
     margin-top: 20px;
     border-radius: 5px;
-    font-family: var(--font-family-paragraphs);
+    font-family:var(--font-family-paragraphs);
+    font-weight: var(--font-weight-bold);
     font-size: 20px;
-    color: var(--dark-red);
+    color: black;
 }
 .btn:hover{
-    background-color: var(--dark-red);
+    background-color: black;
     color: var(--white);
     cursor: pointer;
 }
