@@ -2,6 +2,7 @@
 :root{
     --light-pink:#fee5e5;
     --medium-pink:#fed0d0;
+    --ligth-gray: lightgray;
     --pink:#EFB3B4;
     --medium-red: rgb(191, 2, 2);
     --dark-blue:#1E0377;
@@ -15,14 +16,13 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: var(--light-pink);
+    background-color: var(--ligth-gray);
     display: grid;
     place-content: center;
 }
 main{
-    background-color: var(--medium-red);
+    background-color: rgb(122, 5, 7);
     margin-top: 50%;
-    border-radius: 10px;
 }
 form{
     margin: 40px;
