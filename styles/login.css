@@ -86,6 +86,7 @@ form>input{
 #Admin{
     padding:5px;
     margin-top: -50px;
+    font-size: 17px;
 }
 a{
     background-color: transparent;
@@ -103,6 +104,7 @@ a{
 }
 #forgetpw:hover {
     color: white;
-    text-decoration: underline;
+    border-bottom: none;
+    text-decoration: none;
     cursor: pointer;
 }
