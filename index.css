@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root{
     --light-pink:#fee5e5;
     --medium-pink:#fed0d0;
+    --ligth-gray: lightgray;
     --pink:#EFB3B4;
     --red: #fc1b1b;
+    --medium-red: #a00404;
     --dark-blue:#1E0377;
     --white: white;
     --dark-red:rgb(102, 2, 4);
-    --font-family-paragraphs :Truculenta;
+    --font-family-paragraphs : Poppins;
     --font-family-heading: Kanit;
     --font-weight-regular: 400;
     --font-weight-semiBold: 600;
@@ -18,151 +21,160 @@
     margin: 0;
     padding: 0;
 }
-body{
-   background-image: url(./assets/images/Home/Background1.png);
-   background-repeat: no-repeat;
-   background-size:100%;
-}
 #header{
-    background-image: linear-gradient(45deg, var(--light-pink),var(--medium-pink), var(--pink)) ;
+    background-color: rgba(0,0 , 0, 0.8);
     display: flex;
     justify-content: end;
-    padding: 10px;
+    padding-left: 50px;
+    padding-right: 30px;
     position:sticky;
     top: 0px;
     align-items: center;
     z-index: 999;
+    height: 80px;
 }
-ul{
-    list-style-type: none;
+#logo{
     display: flex;
-    gap: 100px;
-    font-family: var(--font-family-heading);
-    font-weight: var(--font-weight-semiBold);
-    font-size: var(--font-size);
+    margin-right: auto;
+    align-items: center;
+}
+#logo>img{
+    width: 130px;
+}
+#logo>h3{
+    font-family:fantasy;
+    letter-spacing: 2px;
+    width: 50px;
+    color: var(--red);
+    background-color: transparent;
+    margin-left: -35px;
+}
+.separator{
+    color: var(--ligth-gray);
 }
 nav{
     display: flex;
     gap: 100px;
     align-items: center;
 }
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-semiBold);
+    font-size: 17px;
+    margin-right: -30px;
+}
+
 a{
     text-decoration: none;
-    color: var(--dark-blue);
+    color: var(--ligth-gray);
 }
 a:hover{
-    color: var(--red);
+    border-bottom: 4px solid var(--red);
+    padding-bottom: 23px;
     cursor: pointer;
 }
-#header>img{
-    margin-right: auto;
-}
 .dropbtn {
-    background-color: var(--red);
-    color: var(--white);
+    background-color: transparent;
     padding: 16px;
     font-size: 16px;
     border: none;
     border-radius: 20px;
   }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .sub-header {
+    .sub-header {
     position: relative;
     display: inline-block;
   }
-  
-  /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--white);
+    background-color: rgba(0,0 , 0, 0.8);
     min-width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: var(--dark-blue);
+    .dropdown-content a {
+    color: var(--ligth-gray);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     font-family: var(--font-family-heading);
     font-weight: var(--font-weight-semiBold);
   }
-  
-.dropdown-content a:hover {background-color: var(--light-pink);}
 .sub-header:hover .dropdown-content {display: block;}
-
-
+#login{
+    text-decoration: none;
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-semiBold);
+    padding: 13px;
+    width: 100px;
+    text-align: center;
+    background-color: var(--red);
+    color: var(--ligth-gray);
+    
+}
 #landing{
-    display: flex;
-    margin-top: 50px;
-}
-.main-image{
-    width: 33%;
-    height: 100%;
-   border-top-right-radius: 30%;
-   border-top-left-radius: 30%;
-   border-bottom-right-radius: 30%;
-   border-bottom-left-radius: 30%;
-   margin-left: 40px;
-}
-.blood-bag{
-    margin-left: -220px;
+    background-image: url(./assets/images/Home/As\ a\ candidate\ for\ staffing\,\ you\ can\ expect\ a\ high\ level\ of\ integrity\ and\ professionalism\ at\ Gemini\ Staffing\ Consultants_\ _\ Gemini\ Staffing\ Consultants.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 630px;
+    margin-top: -100px;
+    margin-bottom: -50px;
 }
 .card{
-    margin-left: -150px;
-    display: grid;
-    align-items: center;
-    gap:20px;
-    margin-right: 30px;
+    background-color: rgba(32, 31, 31, 0.8);
+    position: absolute;
+    top: 170px;
+    left: 600px;
+    padding: 15px;
+    width: 550px;
 }
 .card>h1{
     font-family: var(--font-family-heading);
     font-weight: var(--font-weight-bold);
-    font-size: 2.8rem;
+    font-size: 2.7rem;
+    width: 400px;
+    border-bottom: 2px solid var(--red);
+    color: var(--white);
+}
+.card>h1>span{
     color: var(--red);
 }
-h1, p{
-    animation: anime 1s linear;
-}
-@keyframes anime{
-    from{
-    transform: translateX(-600px);
-    }
-}
 .card>p{
+    margin-top: 20px;
     font-family: var(--font-family-paragraphs);
-    font-weight: var(--font-weight-semiBold);
-    color: var(--dark-blue);
-    font-size: var(--font-size);
-}
-.card>img{
-    margin-left: 300px; 
+    font-weight: var(--font-weight-regular);
+    color: var(--white);
+    margin-bottom: 40px;
 }
 #join{
-    background-color: var(--red);
-    color: var(--white);
-    padding: 16px;
-    font-size: 16px;
+    text-decoration: none;
     font-family: var(--font-family-heading);
     font-weight: var(--font-weight-semiBold);
-    border: none;
-    border-radius: 20px;
-    position: absolute;
+    width: 100px;
+    padding: 10px;
+    background-color: var(--red);
 }
-.heart-smile{
-position: absolute;
-left: 400px;
-top: 350px;
+#join:hover{
+    border-bottom: none;
+    background-color: var(--white);
+    color: var(--red);
+    cursor: pointer;
 }
+
 #Needer{
     background-color: var(--white);
     display: flex;
     height: auto;
     justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+.benefit-item{
+    box-shadow: 8px 8px 20px gray;
+    text-align: center;
+    padding: 20px;
 }
 #Needer .benefit-item img{
     height: 160px;
@@ -176,21 +188,23 @@ top: 350px;
     font-size: 17px;
     text-align: center;
     width: 180px;
-    color: var(--dark-blue);
+    color: black;
     margin-bottom: 20px;
     animation: animeY 2s alternate;
 } 
 .Need {
     font-family: var(--font-family-heading);
     text-align: center;
-    color: var(--dark-blue);
+    color: black;
+    margin-top: 150px; 
+    margin-bottom: 30px;
 }
 #Needs-per-day{
-    background-color: var(--light-pink);
+    background-color: white;
     display: grid;
     place-items: center;
     height: auto;
-    
+    box-shadow: 8px 8px 20px gray;
 }
 #Needs-per-day .bottles .bottle{
     height: 100px;
@@ -204,7 +218,7 @@ top: 350px;
     font-weight: var(--font-weight-semiBold);
     width: 700px;
     text-align: center;
-    color: var(--dark-blue);
+    color: black;
     margin-bottom: 20px;
     animation: animeY 3s alternate;
 }
@@ -250,18 +264,23 @@ top: 350px;
     width: 390px;
 }
 #How-to-donate{
-    display: grid;
-    background-color: var(--light-pink);   
+    display: grid;   
 }
 #How-to-donate .steps{
     display: flex;
     height: auto;
     justify-content: space-evenly;
+    margin-top: 20px;
+}
+#How-to-donate .steps .step{
+    box-shadow: 8px 8px 20px gray;
+    text-align: center;
+    padding: 20px;
 }
  #How-to-donate h1{
     font-family: var(--font-family-heading);
     text-align: center;
-    color: var(--dark-blue);
+    color: black;
     margin-top: 20px;
 } 
 #How-to-donate .steps img{
@@ -275,7 +294,7 @@ top: 350px;
     font-size: 17px;
     text-align: center;
     width: 180px;
-    color: var(--dark-blue);
+    color: black;
     margin-bottom: 20px;
     animation: animeY 4s alternate;
 } 
@@ -295,12 +314,11 @@ top: 350px;
     font-weight: var(--font-weight-regular);
     margin-top: 80px;
     text-align: center;
-    color: var(--dark-blue);
+    color: black;
     width: 500px;
 }
 #about{
-    display: grid;
-    background-color: var(--light-pink);  
+    display: grid;  
 }
 #about .why-us{
     display: grid;
@@ -317,7 +335,7 @@ top: 350px;
     font-weight: var(--font-weight-bold);
      font-size: 20px; 
     text-align: center;
-    color: var(--dark-blue);
+    color: black;
     margin-top: 20px;
     width: 800px;
 }
@@ -326,10 +344,16 @@ top: 350px;
    margin-top: 80px;
     justify-content: space-evenly;
 }
+#about .infos .info{
+    box-shadow: 8px 8px 20px gray;
+    text-align: center;
+    padding: 20px;
+    text-align: center;
+}
 #about .infos h1{
     font-family: var(--font-family-heading);
     text-align: center;
-    color: var(--dark-blue);
+    color: black;
 }
 #about .infos p{
     font-family: var(--font-family-paragraphs);
@@ -342,14 +366,12 @@ top: 350px;
 #location {
     display: flex;
     justify-content: center;
-    background-color: var(--medium-pink);
 }
 #location iframe{
     margin-top: 20px;
     margin-bottom: 20px;
-    border-radius: 20px;
     height: 350px;
-    width: 500px;
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 @keyframes animeX {
