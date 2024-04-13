@@ -1,0 +1,105 @@
+body {
+    font-family: var(--font-family-heading);
+    /* padding: 20px; */
+    /* max-width: 800px; */
+    margin: 0 auto;
+}
+
+/* Styling the comment form */
+.comment-form {
+    margin-left: 35%;
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.comment-form button {
+    background-color: var(--red);
+    color: var(--ligth-gray);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family-heading);
+    font-size: 17px;
+}
+
+.comment-form button:hover {
+    background-color: rgb(221, 0, 0);
+
+}
+
+
+/* Styling the comment section */
+.comments-section {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+.four{
+    display: flex;
+    flex-direction: column;
+}
+.grid{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+.clients-h2{
+    color: var(--red);
+    font-family: var(--font-family-heading);
+    position: absolute;
+    margin-left: 40%;
+    letter-spacing: 3px;
+    margin-top: 100px;
+}
+.test-clients{
+    display: flex;
+    flex-direction: row;
+    margin-top: 150px;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 20px;
+    box-shadow: 1px 3PX 5PX 3PX rgba(2, 2, 2, 0.575);
+}
+.test-clients img{
+    height: 70px;
+    width: 70px;
+    border-radius:100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.test-clients .p-c{
+    font-family: var(--font-family-paragraphs);
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    width: 315px;
+    margin-bottom: 40px;
+}
+.test-clients .name{
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weights-normal);
+    font-size: 16px;
+    text-align: center;
+    color: var(--red);
+    margin-bottom: 10px;
+}
+.test-clients .job{
+    font-family: var(--font-family-paragraphs);
+    font-size: 14px;
+    text-align: center;
+    color: var(--Grayish-blue);
+}
+.client1 .client2 .cilent3{
+    box-shadow: 1px 3PX 5PX 3PX rgba(2, 2, 2, 0.575);
+}

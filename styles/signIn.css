@@ -5,7 +5,61 @@
     background-image: none;
     display: grid;
     place-content: center;
+}
+#header{
+    background-color: rgba(0,0 , 0, 0.8);
+    display: flex;
+    justify-content: end;
+    padding-left: 50px;
+    padding-right: 30px;
+    position:relative;
+    top: 0px;
+    align-items: center;
+    z-index: 999;
+    height: 80px;
+}
+#logo{
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+#logo >img{
+    width: 130px;
+}
+#logo>h3{
+    font-family:fantasy;
+    letter-spacing: 2px;
+    width: 50px;
+    color: var(--red);
+    background-color: transparent;
+    margin-left: -35px;
+}
+.separator{
+    color: var(--ligth-gray);
+}
+nav{
+    display: flex;
+    gap: 100px;
+    margin-right: 200px;
+    align-items: center; 
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-semiBold);
+    font-size: 17px;
+}
 
+a{
+    text-decoration: none;
+    color: var(--ligth-gray);
+}
+a:hover{
+    border-bottom: 4px solid var(--red);
+    padding-bottom: 23px;
+    cursor: pointer;
 }
 main{
     display: flex;
@@ -36,13 +90,13 @@ form>input{
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-img{
+.signin_card img{
     position: absolute;
     top: 450px;
     right: 340px;
 }
 select, option{
-    border: 2px solid black;
+    border: 2px solid #000000;
     background-color: transparent;
     text-align: center;
     padding: 10px;

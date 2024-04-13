@@ -6,20 +6,23 @@
     display: grid;
     place-content: center;
 }
+nav{
+    margin-right: 200px;
+}
 main{
     display: flex;
-    background-color:rgb(102, 2, 4);
+    background-color:rgba(0, 0, 0, 0.8);
     margin: 50px;
     box-shadow: 1px 3PX 5PX 3PX rgba(2, 2, 2, 0.575);
 }
 .signin_suggest{
-    background-image: url(../assets/images/LOGIN/takingBlood.jpg);
+    background-image: url(../assets/images/LOGIN/test.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right;
+    background-position: center;
     padding: 80px;  
     text-align: center;
-    color: black;
+    color: var(--red);
     width: 300px;
 
     >p{
@@ -48,7 +51,7 @@ main{
         font-family: var(--font-family-heading);
         font-weight: var( --font-weight-bold);
         font-size: 3rem;
-        color: black
+        color: var(--red);
     };
 }
 form{
@@ -56,28 +59,28 @@ form{
 }
 form>input{
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--red);
     background-color: transparent;
     text-align: center;
     padding: 5px;
     width: 200px;
     margin-top: 10px;
     font-size: 15px;
-    font-family: var(--font-family-heading);
-    color: black;
+    font-family: var(--font-family-paragraphs);
+    color: var(--red);
 }
 .btn{
-    border: 2px solid black;
+    border: 2px solid var(--red);
     width: 140px;
     margin-top: 50px;
     border-radius: 5px;
     font-family: var(--font-family-paragraphs);
     font-size: 17px;
-    color: black;
+    color: var(--red);
     transition: .3s;
 }
 .btn:hover{
-    background-color: black;
+    background-color: var(--red);
     color: var(--white);
     cursor: pointer;
 }
@@ -91,14 +94,14 @@ a{
     border-bottom: none;
     font-family: var(--font-family-paragraphs);
     font-size: 17px;
-    color: black;
+    color: var(--red);
     margin-top: -50px; 
     display: inline-block;
     transition:  .3s ;
 }
 #forgetpw{
     text-decoration: underline;
-    color: black;
+    color: var(--red);
 }
 #forgetpw:hover {
     color: white;

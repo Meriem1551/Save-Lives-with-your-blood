@@ -1,14 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+    --light-pink:#fee5e5;
+    --medium-pink:#fed0d0;
+    --ligth-gray: lightgray;
+    --pink:#EFB3B4;
+    --red: #fc1b1b;
+    --medium-red: #a00404;
+    --dark-blue:#1E0377;
+    --white: white;
+    --dark-red:rgb(102, 2, 4);
+    --font-family-paragraphs : Poppins;
+    --font-family-heading: Kanit;
+    --font-weight-regular: 400;
+    --font-weight-semiBold: 600;
+    --font-weight-bold: 700;
+    --font-size: 20px;
+}
 *{
     margin: 0;
     padding: 0;
 }
+
 #header{
     background-color: rgba(0,0 , 0, 0.8);
     display: flex;
     justify-content: end;
     padding-left: 50px;
     padding-right: 30px;
-    position:sticky;
+    position:relative;
     top: 0px;
     align-items: center;
     z-index: 999;
@@ -58,9 +78,18 @@ a:hover{
     cursor: pointer;
 }
 main{
-    width: 500px;
+    width: 900px;
+    margin-top: 40px;
     margin-left: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    place-content: center;
+}
+.blood img{
+    height: auto;
+    width: 500px;
+     margin-left: 100px;
 }
 h1{
     font-family: var( --font-family-heading);
@@ -70,7 +99,7 @@ h1{
 }
 .quest{
     padding: 15px;
-    border-bottom: 2px solid var(--medium-red);
+    border-bottom: 2px solid var(--red);
 }
 h2{
     font-family: var(--font-family-heading);
@@ -89,5 +118,14 @@ h2{
     width: 400px;
 }
 .quest>h2:hover{
-    color: var(--medium-red);
+    color: var(--red);
+}
+footer{
+    background-color: black;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+footer>img{
+    cursor: pointer;
 }

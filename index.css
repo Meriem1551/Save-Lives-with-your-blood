@@ -104,6 +104,10 @@ a:hover{
     font-weight: var(--font-weight-semiBold);
   }
 .sub-header:hover .dropdown-content {display: block;}
+.dropdown-content a:hover{
+background-color: var(--red);
+color: white;
+}
 #login{
     text-decoration: none;
     font-family: var(--font-family-heading);
@@ -207,8 +211,8 @@ a:hover{
     box-shadow: 8px 8px 20px gray;
 }
 #Needs-per-day .bottles .bottle{
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     margin-bottom: 20px;
     margin-top: 20px;
     animation: animeY 3s alternate;
@@ -238,7 +242,7 @@ a:hover{
     animation: animeX 3s alternate;
 }
 #container .columns h2{
-    font-family: var(--font-family-heading);
+    font-family: var(--font-family-paragraphs);
     font-weight: var(--font-weight-regular);
     text-align: center;
     color: black;
@@ -256,7 +260,7 @@ a:hover{
     animation: animeX 3s alternate;
 }
 #container .heart h2{
-    font-family: var(--font-family-heading);
+    font-family: var(--font-family-paragraphs);
     font-weight: var(--font-weight-regular);
     text-align: center;
     color: black;
@@ -319,6 +323,7 @@ a:hover{
 }
 #about{
     display: grid;  
+    background-color: black;
 }
 #about .why-us{
     display: grid;
@@ -335,7 +340,7 @@ a:hover{
     font-weight: var(--font-weight-bold);
      font-size: 20px; 
     text-align: center;
-    color: black;
+    color: white;
     margin-top: 20px;
     width: 800px;
 }
@@ -345,7 +350,6 @@ a:hover{
     justify-content: space-evenly;
 }
 #about .infos .info{
-    box-shadow: 8px 8px 20px gray;
     text-align: center;
     padding: 20px;
     text-align: center;
@@ -353,7 +357,7 @@ a:hover{
 #about .infos h1{
     font-family: var(--font-family-heading);
     text-align: center;
-    color: black;
+    color: white;
 }
 #about .infos p{
     font-family: var(--font-family-paragraphs);
@@ -385,6 +389,7 @@ a:hover{
     }
 }
 #footer{
+    background-color: black;
     display: flex;
     gap: 100px;
     justify-content: center;
