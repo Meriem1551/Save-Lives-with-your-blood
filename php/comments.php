@@ -26,11 +26,9 @@
                     if(isset( $_POST['post'])){
                         $email = $_POST['email'];
                         $comment = $_POST['comment'];
-                        $addComm = "insert into comments values(?,?)";
-                        $stmt = mysqli_prepare($id, $addComm);
-                        mysqli_stmt_bind_param($stmt, 'ss', $email, $comment);
-                        mysqli_stmt_execute($stmt);
-                        if(mysqli_stmt_affected_rows($stmt) <= 0){
+                        $addComm = "insert into comments values('$email','$comment')";
+                        $res = mysqli_query($id, $addComm);
+                        if($res == 0){
                             echo "<script>";
                             echo "alert('Can not add this comment try later');";
                             echo "</script>";   
@@ -60,9 +58,6 @@
         <button onclick="hideComment()">Discard</button>
         </div>
     </main>
-    <!-- textarea for comment-->
-    <!-- button to submit the comment -->
-    
             <script>
                 function postComment(){
                     document.getElementById('comments_box').style.display ="block";
