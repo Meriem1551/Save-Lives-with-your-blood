@@ -35,10 +35,8 @@
                 if (isset($_POST['donate'])){
                     $email = $_POST['email'];
                     $done_date = $_POST['date'];
-                    $req = "update users set donation_date = '$done_date', isDonate = true where email = ?";
-                    $stmt = mysqli_prepare($id, $req);
-                    mysqli_stmt_bind_param($stmt,  's', $email);
-                    if(mysqli_stmt_execute($stmt) == 0){
+                    $req = "update users set donation_date = '$done_date', isDonate = true where email = '$email' ";
+                    if(mysqli_query($id, $req) == 0){
                         echo"can not change dates";
                     }
                     else{
