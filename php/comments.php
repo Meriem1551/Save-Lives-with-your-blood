@@ -20,11 +20,51 @@
     </header>
     <!-- comments -->
     <!-- button to donation request -->
-    
-    <!-- textarea for comment-->
-    <!-- button to submit the comment -->
-    <!-- a div for comment contains email the comment, delte button i'll add the php so just add the div, -->
-    <a href="../php/Donerequest.php">Donate</a>
-
+    <main>
+        <?php
+                require_once 'db_connect.php';
+                    if(isset( $_POST['post'])){
+                        $email = $_POST['email'];
+                        $comment = $_POST['comment'];
+                        $addComm = "insert into comments values('$email','$comment')";
+                        $res = mysqli_query($id, $addComm);
+                        if($res == 0){
+                            echo "<script>";
+                            echo "alert('Can not add this comment try later');";
+                            echo "</script>";   
+                        }
+                        else{
+                            $req = "select * from comments";
+                            $res =  mysqli_query($id,$req);
+                                while ($row = mysqli_fetch_assoc($res)) {
+                                echo"<div id='comment'>";
+                                    echo"<div id='comment'>".$row['email']."</div>";
+                                    echo"<div id='comment'>".$row['comment']."</div>";
+                                echo"</div>";
+                            }
+                        }
+                    }
+        
+        ?>
+        <button onclick="postComment()">COMMENT NOW</button>
+        <div id="comments_box" style="display:none;">
+        <form action="" method="post">
+            <label for="email">Your email:</label><br>
+            <input type="email" name="email" required><br>
+            <label for="comment">Your comment :</label><br>
+            <textarea id="textArea" name="comment"></textarea><br>
+            <input type="submit" name="post" value="POST">
+        </form>
+        <button onclick="hideComment()">Discard</button>
+        </div>
+    </main>
+            <script>
+                function postComment(){
+                    document.getElementById('comments_box').style.display ="block";
+                }
+                function hideComment(){
+                    document.getElementById('comments_box').style.display ="none";
+                }
+            </script>
 </body>
 </html>

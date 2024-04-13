@@ -20,15 +20,11 @@
             </form>
         </div>
         <?php
-            if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
-                if( $id_db = mysqli_select_db($id, "hope_lab") ) {
+            require_once 'db_connect.php';
                     if(isset($_POST['set_date'])) {
                         $new_date = $_POST['date'];
-                        $req = "insert into dates values (?)";
-                        $stmt = mysqli_prepare($id, $req);
-                        mysqli_stmt_bind_param($stmt, 's', $new_date);
-                        mysqli_stmt_execute($stmt);
-                        if(mysqli_stmt_affected_rows($stmt) <= 0){
+                        $req = "insert into dates values ('$new_date')";
+                        if(mysqli_query($id, $req) == 0){
                             echo "<script>";
                             echo "alert('Can not add this date');";
                             echo "</script>"; 
@@ -38,15 +34,7 @@
                             exit;
                         }
                     }
-                }
-                else{
-                    die("Echec de connexion a la base");
-                }
-                mysqli_close($id);
-            } 
-            else {
-                die("Erreur de connection au serveur");
-            }
+
         ?>
         <div id="search_box">
             <h2>Search for a Donataire: </h2><br/>
@@ -68,8 +56,8 @@
         <!-- add search for users who donate between 2 dates as button and then show a bloc like edit profile-->
         <div id="users">
         <?php
-            if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
-                if( $id_db = mysqli_select_db($id, "hope_lab") ) {
+            
+                require_once 'db_connect.php';
                     $get_data = "select * from users where isDonate = true order by family_name "; 
                     $result = mysqli_query($id, $get_data);
                     if(mysqli_num_rows($result) <= 0){
@@ -91,10 +79,8 @@
                         }
                         if(isset($_POST['delete'])) { 
                             $email = $_POST['email'];
-                            $req = "delete from users where email= ?";
-                            $stmt = mysqli_prepare($id, $req);
-                            mysqli_stmt_bind_param($stmt,"s", $email);
-                            mysqli_stmt_execute($stmt);
+                            $req = "delete from users where email= '$email'";
+                            mysqli_query($id, $req);
                             header('Location: ../php/AdminPage.php');
                             exit;
                         }
@@ -102,11 +88,8 @@
                         if (isset($_POST['search'])) {
                             $startDate = $_POST['first_date'];
                             $endDate = $_POST['second_date'];
-                            $req = "select * from users where isDonate = true and donation_date between ? and ? ";
-                            $stmt = mysqli_prepare($id, $req);
-                            mysqli_stmt_bind_param($stmt, 'ss', $startDate, $endDate);
-                            mysqli_stmt_execute($stmt);
-                            $dates = mysqli_stmt_get_result($stmt);
+                            $req = "select * from users where isDonate = true and donation_date between '$startDate' and '$endDate' ";
+                            $dates = mysqli_query($req);
                             if(mysqli_num_rows($dates) <= 0){
                                 echo"No data";
                             }
@@ -135,15 +118,6 @@
                             }
                         }
                     }
-                }
-                else{
-                    die("Echec de connexion a la base");
-                }
-                mysqli_close($id);
-            } 
-            else {
-                die("Erreur de connection au serveur");
-            }
         ?>
         </div>
     </main>

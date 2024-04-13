@@ -1,26 +1,15 @@
 <!-- can modify infos -->
 <?php
   function  update_User_Infos($user_email, $family_n, $first_n, $new_dob, $new_blood_type, $new_phone){
-    if($id = mysqli_connect("localhost:3308", "root", "mysql2024")){
-        if($id_db=mysqli_select_db( $id, "hope_lab")){
-            $updateReq = "update donataire set family_name = '$family_n', first_name = '$first_n', Birth_day = '$new_dob', typeBlood = '$new_blood_type', Phone_num = '$new_phone' where email = ?";
-            $stmt = mysqli_prepare($id, $updateReq);
-            mysqli_stmt_bind_param($stmt, 's', $user_email);
-            if(mysqli_stmt_execute($stmt) == 0){
+            require_once 'db_connect.php';
+            $updateReq = "update users set family_name = '$family_n', first_name = '$first_n', Birth_day = '$new_dob', typeBlood = '$new_blood_type', Phone_num = '$new_phone' where email ='$user_email' ";
+            $sql_run = mysqli_query($id, $updateReq); 
+            if($sql_run == 0){
                 echo"can not change data";
             }else {
                 header("Location: ../php/profile.php");
             }   
-        }
-        else{
-            die("Echec de connecter a la base");
-        }
-        mysqli_close($id);
-    }
-    else{
-        die("Echec de connecter au serveur");
-    }
-  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,23 +34,19 @@
     <main>
         <div  class="userinfo">
             <?php
-                if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
-                    if( $id_db = mysqli_select_db($id, "hope_lab") ) {
+                    require_once 'db_connect.php';
                         session_start();
                         if(isset($_SESSION['login_email'])) {
                             $email = $_SESSION['login_email'];
-                            $searchReq = "select * from users where email = ?";
-                            $stmt = mysqli_prepare($id, $searchReq);
-                            mysqli_stmt_bind_param($stmt, "s", $email);
-                            mysqli_stmt_execute($stmt);
-                            $searchRes = mysqli_stmt_get_result($stmt);
-                            if (mysqli_num_rows($searchRes)> 0) {
-                               $data = mysqli_fetch_assoc($searchRes);
+                            $searchReq = "select * from users where email ='$email' ";
+                            $res = mysqli_query($id,$searchReq);
+                            if (mysqli_num_rows($res)> 0) {
+                               $data = mysqli_fetch_assoc($res);
                                echo "<h3>Family name: </h3><div>".$data['family_name']."</div>";
                                echo "<br/><h3>First name: </h3><div>".$data['first_name']."</div>";
                                echo "<h3>Date of birth: </h3><div>".$data['Birth_day']."</div>";
                                echo "<h3>Type blood: </h3><div>".$data['typeBlood']."</div>";
-                               echo "<h3>Phone number: </h3><div>".$data['Phone_num']."</div>";
+                               echo "<h3>Phone number: </h3><div>"."0".$data['Phone_num']."</div>";
                             }
                             else{
                                 echo "Can not extract data";
@@ -69,10 +54,8 @@
                             //DELETING USER
                             if(isset($_POST['confirm'])){
                                 $email = $_SESSION['login_email'];
-                                $Deletereq = "delete from users where email=?";
-                                $delStmt = mysqli_prepare($id,$Deletereq);
-                                mysqli_stmt_bind_param($delStmt,"s",$email);
-                                mysqli_stmt_execute($delStmt);
+                                $Deletereq = "delete from users where email='$email'";
+                                mysqli_query($id, $Deletereq);
                                 header("Location: ../index.html"); 
                                 exit;
                             }
@@ -90,17 +73,7 @@
                         else{
                             echo "email not provided";
                         }
-                    }
-                    else {
-                        die('Echec de connexion a la base');
-                    } 
-                    mysqli_close($id);
-                }
-                else{
-                    die('Echec de connexion au serveur');
-                }
             ?>
-            <!-- <a href="../pages/editData.html">Edit</a> -->
             <button onclick="editProfile()">Edit</button>
         </div>
 

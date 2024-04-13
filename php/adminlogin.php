@@ -1,12 +1,9 @@
 <?php
 function connect($admin_email, $admin_passw){
-    if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
-        if( $id_db = mysqli_select_db($id, "hope_lab") ) {
-            $searchReq = "select * from admin where email = ?  and password=?";
-            $stmt = mysqli_prepare($id, $searchReq);
-            mysqli_stmt_bind_param($stmt, "ss", $admin_email, $admin_passw );
-            mysqli_stmt_execute($stmt);
-            $searchRes = mysqli_stmt_get_result($stmt);
+    
+        require_once 'db_connect.php';
+            $searchReq = "select * from admin where email = '$admin_email'  and password= '$admin_passw'";
+            $searchRes = mysqli_query($id, $searchReq);
             if(mysqli_num_rows($searchRes) <= 0) {
                 echo "<script>";
                 echo "alert('Your are not an admin.');";
@@ -17,15 +14,7 @@ function connect($admin_email, $admin_passw){
                 echo "window.location.href='../php/AdminPage.php';";
                 echo "</script>";
             }
-        }
-        else {
-            die("Echec de connexion à la base.");
-        }
-    mysqli_close($id);
-    } 
-    else {
-        die("Echec de connexion au serveur de base de données.");
-    }
+    
 }
 
 ?> 

@@ -22,6 +22,11 @@
     padding: 0;
 }
 
+body{
+
+    background-size: contain;
+}
+
 #header{
     background-color: rgba(0,0 , 0, 0.8);
     display: flex;
@@ -29,6 +34,8 @@
     padding-left: 50px;
     padding-right: 30px;
     position:relative;
+    padding-right: 50px;
+    position:sticky;
     top: 0px;
     align-items: center;
     z-index: 999;
