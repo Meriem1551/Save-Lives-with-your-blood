@@ -15,8 +15,6 @@
             <input type="email" name="email" required>
             <select name="date" required>
                 <?php
-                    // if( $id = mysqli_connect("localhost:3308", "root","") ) {
-                    //     if( $id_db = mysqli_select_db($id, "hope_lab") ) {
                         require_once 'db_connect.php';
                             $get_date = "select * from dates";  //
                             $result = mysqli_query($id,$get_date);
@@ -28,15 +26,6 @@
                                     echo"<option>".$date['aval_donate_date']."</option>";
                                 }
                             }
-                    //     }
-                    //     else{
-                    //         die("Echec de connexion a la base");
-                    //     }
-                    //     mysqli_close($id);
-                    // } 
-                    // else {
-                    //     die("Erreur de connection au serveur");
-                    // }
                 ?>
             </select>
             <input type="submit" name="donate" value="Donate" />
