@@ -2,11 +2,8 @@
 function connect($admin_email, $admin_passw){
     
         require_once 'db_connect.php';
-            $searchReq = "select * from admin where email = ?  and password=?";
-            $stmt = mysqli_prepare($id, $searchReq);
-            mysqli_stmt_bind_param($stmt, "ss", $admin_email, $admin_passw );
-            mysqli_stmt_execute($stmt);
-            $searchRes = mysqli_stmt_get_result($stmt);
+            $searchReq = "select * from admin where email = '$admin_email'  and password= '$admin_passw'";
+            $searchRes = mysqli_query($id, $searchReq);
             if(mysqli_num_rows($searchRes) <= 0) {
                 echo "<script>";
                 echo "alert('Your are not an admin.');";
