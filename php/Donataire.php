@@ -3,7 +3,7 @@
 
 //FUNCTIONS DEFINITION
 function isExiste($id, $email, $passw){
-    $searchReq = "select * from users where email = '$email'  and password='$passw'";
+    $searchReq = "select * from users where email = '$email' and  password = '$passw'";
     $res = mysqli_query($id, $searchReq);
     if (mysqli_num_rows($res)> 0) {
         return true;
@@ -62,6 +62,7 @@ function Connect(){
                 echo "<script>";
                 echo "alert('Incorrect email or password');";
                 echo "window.location.href='../pages/login.html';";
+
                 echo "</script>";
             }
         }
