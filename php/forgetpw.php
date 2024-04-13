@@ -12,9 +12,7 @@ function isExiste($id, $email){
         return false;
     }
 }
-
-if( $id = mysqli_connect("localhost:3308", "root","") ) {
-    if( $id_db = mysqli_select_db($id, "hope_lab") ) {
+    require_once 'db_connect.php';
         $your_email = $_POST['your_email'];
         $new_passw = $_POST['new_passw'];
         if(isExiste($id, $your_email)){
@@ -31,6 +29,4 @@ if( $id = mysqli_connect("localhost:3308", "root","") ) {
         else{
             echo "<script>alert('User does not existe');window.location.href='../pages/signIn.html';</script>'";
         }
-    }
-}
 ?>

@@ -15,8 +15,9 @@
             <input type="email" name="email" required>
             <select name="date" required>
                 <?php
-                    if( $id = mysqli_connect("localhost:3308", "root","") ) {
-                        if( $id_db = mysqli_select_db($id, "hope_lab") ) {
+                    // if( $id = mysqli_connect("localhost:3308", "root","") ) {
+                    //     if( $id_db = mysqli_select_db($id, "hope_lab") ) {
+                        require_once 'db_connect.php';
                             $get_date = "select * from dates";  //
                             $result = mysqli_query($id,$get_date);
                             if(mysqli_num_rows($result) <= 0){
@@ -27,22 +28,21 @@
                                     echo"<option>".$date['aval_donate_date']."</option>";
                                 }
                             }
-                        }
-                        else{
-                            die("Echec de connexion a la base");
-                        }
-                        mysqli_close($id);
-                    } 
-                    else {
-                        die("Erreur de connection au serveur");
-                    }
+                    //     }
+                    //     else{
+                    //         die("Echec de connexion a la base");
+                    //     }
+                    //     mysqli_close($id);
+                    // } 
+                    // else {
+                    //     die("Erreur de connection au serveur");
+                    // }
                 ?>
             </select>
             <input type="submit" name="donate" value="Donate" />
         </form>
         <?php
-          if( $id = mysqli_connect("localhost:3308", "root","") ) {
-            if( $id_db = mysqli_select_db($id, "hope_lab") ) {
+            require_once 'db_connect.php';
                 if (isset($_POST['donate'])){
                     $email = $_POST['email'];
                     $done_date = $_POST['date'];
@@ -57,15 +57,6 @@
                         exit;
                     }
                 }
-            }
-            else{
-                die("Echec de connexion a la base");
-            }
-            mysqli_close($id);
-        }  
-        else {
-            die("Erreur de connection au serveur");
-        }
         ?>
         <!-- adding form for admin to set next donation date in an ad and all dates available-->
     </main>

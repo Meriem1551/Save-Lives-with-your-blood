@@ -1,8 +1,9 @@
 <!-- can modify infos -->
 <?php
   function  update_User_Infos($user_email, $family_n, $first_n, $new_dob, $new_blood_type, $new_phone){
-    if($id = mysqli_connect("localhost:3308", "root", "")){
-        if($id_db=mysqli_select_db( $id, "hope_lab")){
+    // if($id = mysqli_connect("localhost:3308", "root", "")){
+    //     if($id_db=mysqli_select_db( $id, "hope_lab")){
+            require_once 'db_connect.php';
             $updateReq = "update donataire set family_name = '$family_n', first_name = '$first_n', Birth_day = '$new_dob', typeBlood = '$new_blood_type', Phone_num = '$new_phone' where email = ?";
             $stmt = mysqli_prepare($id, $updateReq);
             mysqli_stmt_bind_param($stmt, 's', $user_email);
@@ -11,16 +12,16 @@
             }else {
                 header("Location: ../php/profile.php");
             }   
-        }
-        else{
-            die("Echec de connecter a la base");
-        }
-        mysqli_close($id);
-    }
-    else{
-        die("Echec de connecter au serveur");
-    }
-  }
+        // }
+        // else{
+        //     die("Echec de connecter a la base");
+        // }
+        // mysqli_close($id);
+//     }
+//     else{
+//         die("Echec de connecter au serveur");
+//     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,8 +46,7 @@
     <main>
         <div  class="userinfo">
             <?php
-                if( $id = mysqli_connect("localhost:3308", "root","") ) {
-                    if( $id_db = mysqli_select_db($id, "hope_lab") ) {
+                    require_once 'db_connect.php';
                         session_start();
                         if(isset($_SESSION['login_email'])) {
                             $email = $_SESSION['login_email'];
@@ -90,17 +90,7 @@
                         else{
                             echo "email not provided";
                         }
-                    }
-                    else {
-                        die('Echec de connexion a la base');
-                    } 
-                    mysqli_close($id);
-                }
-                else{
-                    die('Echec de connexion au serveur');
-                }
             ?>
-            <!-- <a href="../pages/editData.html">Edit</a> -->
             <button onclick="editProfile()">Edit</button>
         </div>
 

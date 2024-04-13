@@ -1,6 +1,5 @@
 <!-- adding a user if sign in or check for his existance for log in -->
 <?php 
-$login_email;
 
 //FUNCTIONS DEFINITION
 function isExiste($id, $email, $passw){
@@ -44,8 +43,7 @@ function addUser($id, $sign_email,  $sign_passw, $family_name,  $first_name, $bi
     }
 }
 function Connect(){
-if( $id = mysqli_connect("localhost:3308", "root","") ) {
-    if( $id_db = mysqli_select_db($id, "hope_lab") ) {
+    require_once 'db_connect.php';
         if(isset($_POST['sign_in'])){
             $sign_email = $_POST['sign_email']; 
             $sign_passw = $_POST['sign_passw'];
@@ -72,15 +70,6 @@ if( $id = mysqli_connect("localhost:3308", "root","") ) {
                 echo "</script>";
             }
         }
-    }
-    else {
-        die("Echec de connexion à la base.");
-    }
-    mysqli_close($id);
-    } 
-    else {
-        die("Echec de connexion au serveur de base de données.");
-    }
 }
 Connect();
 ?>

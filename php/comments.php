@@ -22,8 +22,7 @@
     <!-- button to donation request -->
     <main>
         <?php
-            if($id = mysqli_connect("localhost:3308", "root", "")){
-                if($id_db = mysqli_select_db($id, "hope_lab")){
+                require_once 'db_connect.php';
                     if(isset( $_POST['post'])){
                         $email = $_POST['email'];
                         $comment = $_POST['comment'];
@@ -47,15 +46,6 @@
                             }
                         }
                     }
-                }
-                else{
-                    die("Echec de connecter a cette base");
-                }
-                mysqli_close($id);
-            }
-            else{
-                die("Echec de connecter e ce serveur");
-            }
         
         ?>
         <button onclick="postComment()">COMMENT NOW</button>

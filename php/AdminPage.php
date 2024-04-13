@@ -20,8 +20,7 @@
             </form>
         </div>
         <?php
-            if( $id = mysqli_connect("localhost:3308", "root","") ) {
-                if( $id_db = mysqli_select_db($id, "hope_lab") ) {
+            require_once 'db_connect.php';
                     if(isset($_POST['set_date'])) {
                         $new_date = $_POST['date'];
                         $req = "insert into dates values (?)";
@@ -38,15 +37,7 @@
                             exit;
                         }
                     }
-                }
-                else{
-                    die("Echec de connexion a la base");
-                }
-                mysqli_close($id);
-            } 
-            else {
-                die("Erreur de connection au serveur");
-            }
+
         ?>
         <div id="search_box">
             <h2>Search for a Donataire: </h2><br/>
@@ -68,8 +59,8 @@
         <!-- add search for users who donate between 2 dates as button and then show a bloc like edit profile-->
         <div id="users">
         <?php
-            if( $id = mysqli_connect("localhost:3308", "root","") ) {
-                if( $id_db = mysqli_select_db($id, "hope_lab") ) {
+            
+                require_once 'db_connect.php';
                     $get_data = "select * from users where isDonate = true order by family_name "; 
                     $result = mysqli_query($id, $get_data);
                     if(mysqli_num_rows($result) <= 0){
@@ -135,15 +126,6 @@
                             }
                         }
                     }
-                }
-                else{
-                    die("Echec de connexion a la base");
-                }
-                mysqli_close($id);
-            } 
-            else {
-                die("Erreur de connection au serveur");
-            }
         ?>
         </div>
     </main>

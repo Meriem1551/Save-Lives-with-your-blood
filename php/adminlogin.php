@@ -1,7 +1,7 @@
 <?php
 function connect($admin_email, $admin_passw){
-    if( $id = mysqli_connect("localhost:3308", "root","") ) {
-        if( $id_db = mysqli_select_db($id, "hope_lab") ) {
+    
+        require_once 'db_connect.php';
             $searchReq = "select * from admin where email = ?  and password=?";
             $stmt = mysqli_prepare($id, $searchReq);
             mysqli_stmt_bind_param($stmt, "ss", $admin_email, $admin_passw );
@@ -17,15 +17,7 @@ function connect($admin_email, $admin_passw){
                 echo "window.location.href='../php/AdminPage.php';";
                 echo "</script>";
             }
-        }
-        else {
-            die("Echec de connexion à la base.");
-        }
-    mysqli_close($id);
-    } 
-    else {
-        die("Echec de connexion au serveur de base de données.");
-    }
+    
 }
 
 ?> 
