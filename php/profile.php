@@ -1,7 +1,7 @@
 <!-- can modify infos -->
 <?php
   function  update_User_Infos($user_email, $family_n, $first_n, $new_dob, $new_blood_type, $new_phone){
-    if($id = mysqli_connect("localhost:3308", "root", "mysql2024")){
+    if($id = mysqli_connect("localhost:3308", "root", "")){
         if($id_db=mysqli_select_db( $id, "hope_lab")){
             $updateReq = "update donataire set family_name = '$family_n', first_name = '$first_n', Birth_day = '$new_dob', typeBlood = '$new_blood_type', Phone_num = '$new_phone' where email = ?";
             $stmt = mysqli_prepare($id, $updateReq);
@@ -45,7 +45,7 @@
     <main>
         <div  class="userinfo">
             <?php
-                if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
+                if( $id = mysqli_connect("localhost:3308", "root","") ) {
                     if( $id_db = mysqli_select_db($id, "hope_lab") ) {
                         session_start();
                         if(isset($_SESSION['login_email'])) {

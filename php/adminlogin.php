@@ -1,6 +1,6 @@
 <?php
 function connect($admin_email, $admin_passw){
-    if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
+    if( $id = mysqli_connect("localhost:3308", "root","") ) {
         if( $id_db = mysqli_select_db($id, "hope_lab") ) {
             $searchReq = "select * from admin where email = ?  and password=?";
             $stmt = mysqli_prepare($id, $searchReq);

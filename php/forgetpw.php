@@ -13,7 +13,7 @@ function isExiste($id, $email){
     }
 }
 
-if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
+if( $id = mysqli_connect("localhost:3308", "root","") ) {
     if( $id_db = mysqli_select_db($id, "hope_lab") ) {
         $your_email = $_POST['your_email'];
         $new_passw = $_POST['new_passw'];

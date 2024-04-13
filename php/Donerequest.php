@@ -15,7 +15,7 @@
             <input type="email" name="email" required>
             <select name="date" required>
                 <?php
-                    if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
+                    if( $id = mysqli_connect("localhost:3308", "root","") ) {
                         if( $id_db = mysqli_select_db($id, "hope_lab") ) {
                             $get_date = "select * from dates";  //
                             $result = mysqli_query($id,$get_date);
@@ -41,7 +41,7 @@
             <input type="submit" name="donate" value="Donate" />
         </form>
         <?php
-          if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
+          if( $id = mysqli_connect("localhost:3308", "root","") ) {
             if( $id_db = mysqli_select_db($id, "hope_lab") ) {
                 if (isset($_POST['donate'])){
                     $email = $_POST['email'];

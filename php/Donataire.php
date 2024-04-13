@@ -44,7 +44,7 @@ function addUser($id, $sign_email,  $sign_passw, $family_name,  $first_name, $bi
     }
 }
 function Connect(){
-if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
+if( $id = mysqli_connect("localhost:3308", "root","") ) {
     if( $id_db = mysqli_select_db($id, "hope_lab") ) {
         if(isset($_POST['sign_in'])){
             $sign_email = $_POST['sign_email']; 

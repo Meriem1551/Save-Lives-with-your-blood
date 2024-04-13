@@ -20,7 +20,7 @@
             </form>
         </div>
         <?php
-            if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
+            if( $id = mysqli_connect("localhost:3308", "root","") ) {
                 if( $id_db = mysqli_select_db($id, "hope_lab") ) {
                     if(isset($_POST['set_date'])) {
                         $new_date = $_POST['date'];
@@ -68,7 +68,7 @@
         <!-- add search for users who donate between 2 dates as button and then show a bloc like edit profile-->
         <div id="users">
         <?php
-            if( $id = mysqli_connect("localhost:3308", "root","mysql2024") ) {
+            if( $id = mysqli_connect("localhost:3308", "root","") ) {
                 if( $id_db = mysqli_select_db($id, "hope_lab") ) {
                     $get_data = "select * from users where isDonate = true order by family_name "; 
                     $result = mysqli_query($id, $get_data);

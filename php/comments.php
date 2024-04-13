@@ -22,7 +22,7 @@
     <!-- button to donation request -->
     <main>
         <?php
-            if($id = mysqli_connect("localhost:3308", "root", "mysql2024")){
+            if($id = mysqli_connect("localhost:3308", "root", "")){
                 if($id_db = mysqli_select_db($id, "hope_lab")){
                     if(isset( $_POST['post'])){
                         $email = $_POST['email'];
