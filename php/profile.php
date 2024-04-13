@@ -1,10 +1,8 @@
 <!-- can modify infos -->
 <?php
   function  update_User_Infos($user_email, $family_n, $first_n, $new_dob, $new_blood_type, $new_phone){
-    // if($id = mysqli_connect("localhost:3308", "root", "")){
-    //     if($id_db=mysqli_select_db( $id, "hope_lab")){
             require_once 'db_connect.php';
-            $updateReq = "update donataire set family_name = '$family_n', first_name = '$first_n', Birth_day = '$new_dob', typeBlood = '$new_blood_type', Phone_num = '$new_phone' where email = ?";
+            $updateReq = "update users set family_name = '$family_n', first_name = '$first_n', Birth_day = '$new_dob', typeBlood = '$new_blood_type', Phone_num = '$new_phone' where email = ?";
             $stmt = mysqli_prepare($id, $updateReq);
             mysqli_stmt_bind_param($stmt, 's', $user_email);
             if(mysqli_stmt_execute($stmt) == 0){
@@ -12,15 +10,6 @@
             }else {
                 header("Location: ../php/profile.php");
             }   
-        // }
-        // else{
-        //     die("Echec de connecter a la base");
-        // }
-        // mysqli_close($id);
-//     }
-//     else{
-//         die("Echec de connecter au serveur");
-//     }
 }
 ?>
 <!DOCTYPE html>

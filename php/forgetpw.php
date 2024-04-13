@@ -16,9 +16,9 @@ function isExiste($id, $email){
         $your_email = $_POST['your_email'];
         $new_passw = $_POST['new_passw'];
         if(isExiste($id, $your_email)){
-            $request = "update users set  password=? where email=?";
+            $request = "update users set  password = '$new_passw' where email=?";
             $stmt = mysqli_prepare($id,$request);
-            mysqli_stmt_bind_param($stmt,"ss",$new_passw,$your_email);
+            mysqli_stmt_bind_param($stmt,"s",$your_email);
             if(mysqli_stmt_execute($stmt)) {
                 echo "<script>alert('Updated password successfully. Log in now');window.location.href='../pages/login.html';</script>";  
             }
