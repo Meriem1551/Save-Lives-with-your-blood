@@ -23,7 +23,11 @@
                             }
                             else{
                                 while($date = mysqli_fetch_assoc($result)){
-                                    echo"<option>".$date['aval_donate_date']."</option>";
+                                    if(date("Y-m-d") >  $date['aval_donate_date']){//getting current date
+                                        continue;
+                                    }else{
+                                        echo"<option>".$date['aval_donate_date']."</option>";
+                                    }
                                 }
                             }
                 ?>
