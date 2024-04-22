@@ -58,7 +58,7 @@
         <?php
             
                 require_once 'db_connect.php';
-                    $get_data = "select * from users where isDonate = true order by family_name "; 
+                    $get_data = "select * from users where isDonate = true order by typeBlood "; 
                     $result = mysqli_query($id, $get_data);
                     if(mysqli_num_rows($result) <= 0){
                         echo"Empty data base";
@@ -70,6 +70,7 @@
                                 echo"<div>".$row['email']."</div>";
                                 echo"<div>".$row['family_name']."</div>";
                                 echo"<div>".$row['first_name']."</div>";
+                                echo"<div>".$row['typeBlood']."</div>";
                                 echo"<div>"."0".$row['Phone_num']."</div>";
                                 echo"<form action='' method='post'>";
                                     echo "<input type='hidden' name='email' value='". $row['email']."'>";
@@ -88,7 +89,7 @@
                         if (isset($_POST['search'])) {
                             $startDate = $_POST['first_date'];
                             $endDate = $_POST['second_date'];
-                            $req = "select * from users where isDonate = true and donation_date between '$startDate' and '$endDate' ";
+                            $req = "select * from users where isDonate = true and donation_date between '$startDate' and '$endDate' order by  typeBlood";
                             $dates = mysqli_query($req);
                             if(mysqli_num_rows($dates) <= 0){
                                 echo"No data";
@@ -101,6 +102,7 @@
                                             echo"<div>".$row['email']."</div>";
                                             echo"<div>".$row['family_name']."</div>";
                                             echo"<div>".$row['first_name']."</div>";
+                                            echo"<div>".$row['typeBlood']."</div>";
                                             echo"<div>"."0".$row['Phone_num']."</div>";
                                             echo"<form action='' method='post'>";
                                                 echo "<input type='hidden' name='email' value='". $row['email']."'>";
