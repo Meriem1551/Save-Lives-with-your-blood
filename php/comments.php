@@ -23,10 +23,23 @@
     <main>
         <?php
                 require_once 'db_connect.php';
+                $req = "select * from comments";
+                $res =  mysqli_query($id,$req);
+                    while ($row = mysqli_fetch_assoc($res)) {
+                        echo"<div id='comment'>";
+                            echo"<div id='comment'>".$row['email']."</div>";
+                            echo"<div id='comment'>".$row['comment']."</div>";
+                            echo"<form action='' method='post'>";
+                                echo"<input type='hidden' name='email' value = '".$row['email']."'>";
+                                echo"<input type='hidden' name='comment_id' value = '".$row['id']."'>";
+                                echo"<input type='submit' name='delete' value='Delete'>";
+                            echo"</form>";
+                        echo"</div>";
+                    }
                     if(isset( $_POST['post'])){
                         $email = $_POST['email'];
                         $comment = $_POST['comment'];
-                        $addComm = "insert into comments values('$email','$comment')";
+                        $addComm = "insert into comments (email, comment) values('$email','$comment')";
                         $res = mysqli_query($id, $addComm);
                         if($res == 0){
                             echo "<script>";
@@ -34,17 +47,18 @@
                             echo "</script>";   
                         }
                         else{
-                            $req = "select * from comments";
-                            $res =  mysqli_query($id,$req);
-                                while ($row = mysqli_fetch_assoc($res)) {
-                                echo"<div id='comment'>";
-                                    echo"<div id='comment'>".$row['email']."</div>";
-                                    echo"<div id='comment'>".$row['comment']."</div>";
-                                echo"</div>";
-                            }
+                            header('Location: ../php/comments.php');
+                            exit;
                         }
                     }
-        
+                    if(isset($_POST['delete'])){
+                        $email = $_POST['email'];
+                        $comment_id = $_POST['comment_id'];
+                        $delete_req = "delete from comments where email  ='$email' and  id= '$comment_id' ";
+                        mysqli_query($id, $delete_req);
+                        header('Location: ../php/comments.php');
+                        exit;
+                    }
         ?>
         <button onclick="postComment()">COMMENT NOW</button>
         <div id="comments_box" style="display:none;">
