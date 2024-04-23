@@ -75,7 +75,7 @@
         <?php
             
                 require_once 'db_connect.php';
-                    $get_data = "select * from users where isDonate = true order by family_name "; 
+                    $get_data = "select * from users where isDonate = true order by typeBlood "; 
                     $result = mysqli_query($id, $get_data);
                     if(mysqli_num_rows($result) <= 0){
                         echo"<p>Empty data base</p>";
@@ -87,6 +87,7 @@
                                 echo"<div>".$row['email']."</div>";
                                 echo"<div>".$row['family_name']."</div>";
                                 echo"<div>".$row['first_name']."</div>";
+                                echo"<div>".$row['typeBlood']."</div>";
                                 echo"<div>"."0".$row['Phone_num']."</div>";
                                 echo"<form action='' method='post'>";
                                     echo "<input type='hidden' name='email' value='". $row['email']."'>";
@@ -118,6 +119,7 @@
                                             echo"<div>".$row['email']."</div>";
                                             echo"<div>".$row['family_name']."</div>";
                                             echo"<div>".$row['first_name']."</div>";
+                                            echo"<div>".$row['typeBlood']."</div>";
                                             echo"<div>"."0".$row['Phone_num']."</div>";
                                             echo"<form action='' method='post'>";
                                                 echo "<input type='hidden' name='email' value='". $row['email']."'>";
