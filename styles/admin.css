@@ -1,170 +1,4 @@
-/*  import google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-*{
-  margin: 0;
-  padding: 0;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body{
-  background-color: #B8DDE6;
-}
-
-li{
-    display: flex;
-    flex-direction: row;
-}
-
-nav{
-  position: sticky;
-  top: 0;
-  bottom: 0;
-  height: 100vh;
-  left: 0;
-  width: 70px;
-  background: #fff;
-  overflow: hidden;
-  transition: 1s;
-}
-nav:hover{
-  width: 350px;
-  transition: 1s;
-}
-
- ul{
-  margin-top: 15px;
-}
-
-a{
-  position: relative;
-  width: 280px;
-  font-size: 14px;
-  color: rgb(85, 83, 83);
-  display: table;
-  padding: 10px;
-}
-nav li  img{
-    height: 50px;
-    width: 50px;
-}
-nav .fa-solid{
-  position: relative;
-  width: 70px;
-  height: 70px;
-  top: 20px;
-  font-size: 20px;
-  text-align: center;
-}
-.nav-item{
-  position: relative;
-  top: 18px;
-  margin-left: 10px;
-}
-
-
-/* .logout{
-  position: absolute;
-  bottom: 0;
-} */
-.dropdown{
-  position: absolute;
-  float: right;
-  transition: 0.3s ease;
-}
-.sub-menu{
-    display: none;
-    visibility: hidden;
- 
-   margin-top: 50px;
-    margin-left:  -150px; 
- padding: 6px 50px 10px;
- transition: 0.4s ease;
-}
-.setting:hover .sub-menu {
-    display: block;
-    visibility: visible;
-}
-
-.sub-menu .sub-item{
-  font-size: 13px;
-  opacity: 1;
-}
-.container{
-  display: flex;
-}
-.profile{
-  position: relative;
-  margin-left: 30%;
-  width: 30%;
-  height: auto;
-  padding:0 45px;
-  border-radius: 20px;
-  border:1px solid #022252;
-  margin-top: 5%;
-  background-color:  #B50B0B;
-  }
-  .profile > img{
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 10px 0 5px 25% ;
-   
-  }
-  form{
-    flex: 0 0 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  input{
-   width: 100%;
-   border: none;
-   padding: 5px 5px;
-   color: #050505;
-   background-color: white;
-    border-radius: 7px;
-    font-weight: 400;
-    display: grid;
-    grid-template-rows: auto;
-    cursor: pointer;
-  }
-  input:hover{
-    box-shadow: 3px 5px 15px #111441;
-    transform: translateY(-3px);
-  }
-  .btn{
-    width: 40%;
-    padding: 10px;
-    border-radius: 0.5rem;
-    background-image: linear-gradient(15deg, #005bbd, #87ceeb);
-    font-weight: 600;
-    cursor: pointer;
-    margin-bottom: 2rem;
-    margin-top: 10px;
-    float: right;
-    color: #eae7f0;
-    font-size: 14px;
-  }
-  .btn:hover{
-    box-shadow: 3px 5px 15px #111441;
-    transform: translateY(-3px);
-  }
-  .file{
-    width: 50%;
-    padding: 10px;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    cursor: pointer;
-    margin-bottom: 2rem;
-    margin-top: 10px;
-    margin-left: -7%;
-    float: left;
-  }
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
 :root{
     --light-pink:#fee5e5;
@@ -183,17 +17,20 @@ nav .fa-solid{
     --font-size: 20px;
 }
 body{
-    background-color: var(--pink);
+    background-color: white;
+    margin: auto;
     display: grid;
     place-content: center;
+    margin-top: 70px;
 }
 main{
     padding: 50px;
     font-family:var(--font-family-heading) ;
     background-color: var(--medium-red);
     color: var(--pink);
-    width: 400px;
-    border-radius: 10px;
+    width: 350px;
+    /* height: 418px; */
+    /* border-radius: 10px; */
 }
 input{
     background-color: transparent;
@@ -213,12 +50,31 @@ h1{
     width: 120px;
     background-color: var(--pink);
     margin-top: 20px;
-    color: var(--dark-red);
-    border-radius: 10px;
-    &:hover{
+    color: var(--medium-red);
+    border-radius: 5px;
+    margin-left: 100px;
+}
+    .btn:hover{
         cursor: pointer;
         background-color: transparent;
         border: 2px solid var(--pink);
         color: var(--pink);
+    }
+
+.admin-form{
+    animation: animeX 3s alternate;
+    display: flex;
+    box-shadow: 1px 1PX 5PX 3PX rgba(139, 69, 69, 0.87);
+}
+.admin-form img{
+    height: 460px;
+    width: 500px;
+    margin-top: 70px;
+    
+}
+
+@keyframes animeX {
+    from{
+        transform: translateX(-100px);
     }
 }

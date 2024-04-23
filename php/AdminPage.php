@@ -8,9 +8,26 @@
     <title>Admin page</title>
 </head>
 <body>
+<header id="header">
+    <div id="logo">
+    <img src="../assets/images/Home/logo.png" alt="logo" id="logo">
+      <h3>Donate Life</h3>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li> 
+            <li class="separator">|</li>  
+            <li><a href="../pages/FAQ.html">FAQ</a></li>
+            <li class="separator">|</li> 
+            <li><a href="#footer">Contacts</a></li>
+        </ul>
+    </nav>
+</header>
     <main>
+        <div class="btn">
         <button onclick="showSearchBloc()">search</button>
         <button onclick="addDate()">New date</button>
+        </div>
         <div id="add_date">
             <h2>When is the next date for donation?</h2>
             <form action="" method="post">
@@ -61,7 +78,7 @@
                     $get_data = "select * from users where isDonate = true order by family_name "; 
                     $result = mysqli_query($id, $get_data);
                     if(mysqli_num_rows($result) <= 0){
-                        echo"Empty data base";
+                        echo"<p>Empty data base</p>";
                     }
                     else{
                         echo"<h2>All Donataires</h2>";
@@ -89,7 +106,7 @@
                             $startDate = $_POST['first_date'];
                             $endDate = $_POST['second_date'];
                             $req = "select * from users where isDonate = true and donation_date between '$startDate' and '$endDate' ";
-                            $dates = mysqli_query($req);
+                            $dates = mysqli_query($id, $req);
                             if(mysqli_num_rows($dates) <= 0){
                                 echo"No data";
                             }
@@ -121,7 +138,17 @@
         ?>
         </div>
     </main>
-    <script>
+    <footer id="footer">
+        <img src="../assets/images/Home/icons8-facebook-60.png" alt="facebook" width="40px" haight="40px">
+        <img src="../assets/images/Home/icons8-instagram-60.png" alt="instagram"width="40px" haight="40px">
+        <img src="../assets/images/Home/icons8-twitter-60.png" alt="twitter" width="40px" haight="40px">
+        <img src="../assets/images/Home/icons8-whatsapp-60.png" alt="whatsapp" width="40px" haight="40px">
+        <img src="../assets/images/Home/icons8-gmail-60.png" alt="gmail" width="40px" haight="40px">
+        <!-- social media icons and copyrights -->
+    </footer>
+    
+</body>
+<script>
         function showSearchBloc(){
             document.getElementById('search_box').style.display = "block";
         }
@@ -132,5 +159,4 @@
             document.getElementById('add_date').style.display = "block";
         }
     </script>
-</body>
 </html>

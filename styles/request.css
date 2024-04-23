@@ -1,1 +1,154 @@
-/* add the css and other html code if you want */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+    --light-pink:#fee5e5;
+    --medium-pink:#fed0d0;
+    --ligth-gray: lightgray;
+    --pink:#EFB3B4;
+    --red: #fc1b1b;
+    --medium-red: #a00404;
+    --dark-blue:#1E0377;
+    --white: white;
+    --dark-red:rgb(102, 2, 4);
+    --font-family-paragraphs : Poppins;
+    --font-family-heading: Kanit;
+    --font-weight-regular: 400;
+    --font-weight-semiBold: 600;
+    --font-weight-bold: 700;
+    --font-size: 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    background-color: rgba(0,0 , 0, 0.8);
+    display: flex;
+    justify-content: end;
+    padding-left: 50px;
+    padding-right: 30px;
+    position:sticky;
+    top: 0px;
+    align-items: center;
+    z-index: 999;
+    height: 80px;
+}
+#logo{
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+#logo>img{
+    width: 130px;
+}
+#logo>h3{
+    font-family:fantasy;
+    letter-spacing: 2px;
+    width: 50px;
+    color: var(--red);
+    background-color: transparent;
+    margin-left: -35px;
+}
+.separator{
+    color: var(--ligth-gray);
+}
+nav{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    margin-right: 200px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-semiBold);
+    font-size: 17px;
+    margin-right: -30px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--ligth-gray);
+}
+a:hover{
+    border-bottom: 4px solid var(--red);
+    padding-bottom: 23px;
+    cursor: pointer;
+}
+main{
+display: flex;
+flex-direction: column;
+background-color: black;
+margin: 50px;
+box-shadow: 1px 1PX 5PX 3PX rgba(2, 2, 2, 0.575);
+width: 600px;
+padding: 50px; 
+display: grid;
+    place-content: center;
+    margin-left: 340px;
+>h2{
+    animation: 0;
+    font-family: var(--font-family-heading);
+    font-weight: var( --font-weight-bold);
+     font-size: 2rem; 
+    color: var(--red);
+}}
+form{
+    margin-top: 30px;
+    
+}
+form>input{
+    border: none;
+    border-bottom: 2px solid var(--red);
+    background-color: transparent;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: var(--font-family-paragraphs);
+    color: var(--red);
+}
+#btn{
+    border: 2px solid var(--red);
+    width: 140px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: var(--font-family-paragraphs);
+    font-size: 17px;
+    color: var(--red);
+    transition: .3s;
+    margin-left: 60px;
+}
+#btn:hover{
+    background-color: var(--red);
+    color: var(--white);
+    cursor: pointer;
+}
+.donate-form{
+    display: flex;
+    flex-direction: column;
+}
+select{
+    border: none;
+    border-bottom: 2px solid var(--red);
+    background-color: transparent;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: var(--font-family-paragraphs);
+    color: var(--red);
+}
+footer{
+    background-color: black;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+footer>img{
+    cursor: pointer;
+}

@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="../styles/profile.css">
     <title>Profile</title>
 </head>
+<style>
+    
+</style>
 <body>
 <header>
         <img src="../assets/images/Home/icons8-blood-donation-64.png" alt="Blood Donation Icon"/>

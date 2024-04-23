@@ -28,13 +28,14 @@ function connect($admin_email, $admin_passw){
     <title>Admin login</title>
 </head>
 <body>
+    <div class="admin-form">
+    <img src="../assets/images/admin/login-admin.png" alt="">
     <main>
         <h1>Admin log In</h1>
         <form action="" method="post">
-            <label for="email">Email: </label><br/>
-            <input type="email" name="admin_email"  required><br>
-            <label for="password">Password: </label><br/>
-            <input type="password" name="admin_passw" required><br>
+            <input type="email" name="admin_email" placeholder="Email" required><br>
+
+            <input type="password" name="admin_passw" placeholder="Password" required><br>
             <input type="submit" name="login" value="Login" class="btn">
         </form>
         <?php
@@ -44,7 +45,7 @@ function connect($admin_email, $admin_passw){
             connect($admin_email,$admin_passw);
         }
         ?>
-    </main>
-
+    </main></div>
+        
 </body>
 </html>

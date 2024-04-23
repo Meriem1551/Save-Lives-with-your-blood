@@ -1,4 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+    --light-pink:#fee5e5;
+    --medium-pink:#fed0d0;
+    --ligth-gray: lightgray;
+    --pink:#EFB3B4;
+    --red: #fc1b1b;
+    --medium-red: #a00404;
+    --dark-blue:#1E0377;
+    --white: white;
+    --dark-red:rgb(102, 2, 4);
+    --font-family-paragraphs : Poppins;
+    --font-family-heading: Kanit;
+    --font-weight-regular: 400;
+    --font-weight-semiBold: 600;
+    --font-weight-bold: 700;
+    --font-size: 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    background-size: contain;
+}
+
+#header{
+    background-color: rgba(0,0 , 0, 0.8);
+    display: flex;
+    justify-content: end;
+    padding-left: 50px;
+    padding-right: 30px;
+    position:relative;
+    padding-right: 50px;
+    position:sticky;
+    top: 0px;
+    align-items: center;
+    z-index: 999;
+    height: 80px;
+}
+#logo{
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+#logo >img{
+    width: 130px;
+}
+#logo>h3{
+    font-family:fantasy;
+    letter-spacing: 2px;
+    width: 50px;
+    color: var(--red);
+    background-color: transparent;
+    margin-left: -35px;
+}
+.separator{
+    color: var(--ligth-gray);
+}
+nav{
+    display: flex;
+    gap: 100px;
+    margin-right: 200px;
+    align-items: center; 
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-semiBold);
+    font-size: 17px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--ligth-gray);
+}
+a:hover{
+    border-bottom: 4px solid var(--red);
+    padding-bottom: 23px;
+    cursor: pointer;
+}
 #search_box, #add_date{
     display: none;
+}
+/* Style général */
+h1,h2,label{
+    font-family: var(--font-family-heading);
+}
+p{
+    font-family: var(--font-family-paragraphs);
+}
+h2{
+    margin-top: 40px;
+}
+main {
+    margin: 20px;
+    display: grid;
+    /* Alignement des éléments */
+    align-items: center;
+    place-content: center;
+}
+
+/* Style des boutons */
+main button {
+    border: 2px solid var(--red);
+    padding: 10px 20px;
+    width: 140px;
+    margin-top: 50px;
+    border-radius: 5px;
+    font-family: var(--font-family-paragraphs);
+    font-size: 17px;
+    color: var(--red);
+    transition: .3s;
+}
+
+button:hover {
+    background-color: var(--red);
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* Style des formulaires */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="date"] {
+    border: 2px solid black;
+    padding: 10px 10px;
+    width: 140px;
+    border-radius: 5px;
+    font-family: var(--font-family-paragraphs);
+    font-size: 17px;
+    color: black;
+    transition: .3s;
+}
+
+input[type="submit"] {
+    border: 2px solid var(--red);
+    padding: 10px 10px;
+    width: 140px;
+    border-radius: 5px;
+    font-family: var(--font-family-paragraphs);
+    font-size: 17px;
+    color: var(--red);
+    transition: .3s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--red);
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* Style des utilisateurs */
+#users {
+    margin-top: 20px;
+}
+
+.single_user {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Style de la boîte de recherche */
+#search_box {
+    display: none;
+}
+
+#result_search {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+
+#footer{
+    background-color: black;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    position: relative;
+}
+#footer img{
+    cursor: pointer;
 }
 /* rest of styles */
