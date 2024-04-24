@@ -87,8 +87,8 @@ box-shadow: 1px 1PX 5PX 3PX rgba(2, 2, 2, 0.575);
 width: 600px;
 padding: 50px; 
 display: grid;
-    place-content: center;
-    margin-left: 340px;
+place-content: center;
+margin-left: 30px;
 >h2{
     animation: 0;
     font-family: var(--font-family-heading);

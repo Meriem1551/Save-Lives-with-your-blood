@@ -38,16 +38,16 @@
 .clients-h2{
     color: var(--red);
     font-family: var(--font-family-heading);
-    position: absolute;
-    margin-left: 40%;
+    position: relative;
+    margin-left: 39%;
     letter-spacing: 3px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .test-clients{
     display: flex;
     flex-direction: row;
-    margin-top: 150px;
+    margin-top: 100px;
     justify-content: space-evenly;
     align-items: baseline;
     padding: 20px;
@@ -92,26 +92,31 @@
             </ul>
         </nav>
     </header>
-   <h2 class="clients-h2">CLIENT TESTIMONIALS </h2>
+   
     <!-- comments -->
     <!-- button to donation request -->
 
     <main>
+         <h2 class="clients-h2">CLIENT TESTIMONIALS </h2>
         <?php
                 require_once 'db_connect.php';
                 $req = "select * from comments";
                 $res =  mysqli_query($id,$req);
-                    while ($row = mysqli_fetch_assoc($res)) {
-                        echo"<div id='comment'>";
-                            echo"<div id='comment'>".$row['email']."</div>";
-                            echo"<div id='comment'>".$row['comment']."</div>";
-                            echo"<form action='' method='post'>";
+                 echo"<div class='test-clients'>";
+                while ($row = mysqli_fetch_assoc($res)) {
+                   
+                        echo"<div class='client'>";
+                            echo "<img src='../assets/images/admin/icons8-male-user-96.png' alt='imge' style='height:100px;width: 100px;margin-left:100px;margin-bottom:50px;'>";
+                            echo"<div class='email'>".$row['email']."</div>";
+                            echo"<div class='comment'>".$row['comment']."</div>";
+                            echo"<form action='' method='post' class='delete-form'>";
                                 echo"<input type='hidden' name='email' value = '".$row['email']."'>";
                                 echo"<input type='hidden' name='comment_id' value = '".$row['id']."'>";
-                                echo"<input type='submit' name='delete' value='Delete'>";
+                                echo"<input type='submit' name='delete' value='Delete' class='delete'>";
                             echo"</form>";
-                        echo"</div>";
-                    }
+                        echo "</div>";
+                   
+                } echo"</div>";
                     if(isset( $_POST['post'])){
                         $email = $_POST['email'];
                         $comment = $_POST['comment'];
@@ -122,25 +127,7 @@
                             echo "alert('Can not add this comment try later');";
                             echo "</script>";   
                         }
-                    }
                         else{
-                            $req = "select * from comments";
-                            $res =  mysqli_query($id,$req);
-                            echo "<div class='grid'>";
-                                while ($row = mysqli_fetch_assoc($res)) {
-                                
-                                    echo"<div class='test-clients'>";
-                                        echo"<div class='client'>";
-                                            echo "<img src='../assets/images/admin/icons8-male-user-96.png' alt='imge' style='height:100px;width: 100px;margin-left:100px;margin-bottom:50px;'>";
-                                            echo"<div class='email'>".$row['email']."</div>";
-                                            echo"<div class='comment'>".$row['comment']."</div>";
-
-                                        echo"</div>";
-                                    echo"</div>";
-                                
-                            }echo"</div>";
-                        }
-        
                             header('Location: ../php/comments.php');
                             exit;
                         }
@@ -155,35 +142,15 @@
                     }
         ?>
         <div class="comment-form">
-        <h2 style="margin-bottom: 30px;">Leave a Comment</h2>
+        <h2 style="margin-top:50px; margin-bottom: 30px;">Leave a Comment</h2>
         <form id="commentForm" method="post">
             <input type="text" id="email" name="email" placeholder="email" required>
             <textarea id="comment" name="comment" placeholder="Your Comment" required></textarea>
             <input type="submit" name="post" value="POST" id="btn">
         </form>
     </div>
-        <!-- <button onclick="postComment()">COMMENT NOW</button> -->
-        <!-- <div id="comment-form">
-        <h2 style="margin-bottom: 30px;">Leave a Comment</h2>
-        <form action="" method="post" id="commentForm">
-            <label for="email">Your email:</label><br>
-            <input type="email" name="email" required><br>
-            <label for="comment">Your comment :</label><br>
-            <textarea id="textArea" name="comment"></textarea><br>
-            <input type="submit" name="post" value="POST">
-        </form>
-
-        </div> -->
     </main>
-            <!-- <script>
-                function postComment(){
-                    document.getElementById('comments_box').style.display ="block";
-                }
-                function hideComment(){
-                    document.getElementById('comments_box').style.display ="none";
-                }
-            </script> -->
-            <footer id="footer">
+        <footer id="footer">
         <img src="../assets/images/Home/icons8-facebook-60.png" alt="facebook" width="40px" haight="40px">
         <img src="../assets/images/Home/icons8-instagram-60.png" alt="instagram"width="40px" haight="40px">
         <img src="../assets/images/Home/icons8-twitter-60.png" alt="twitter" width="40px" haight="40px">
@@ -193,3 +160,4 @@
     </footer>
 </body>
 </html>
+ 
