@@ -82,19 +82,28 @@
                     }
                     else{
                         echo"<h2>All Donataires</h2>";
-                        while($row = mysqli_fetch_assoc($result)){
-                            echo"<div class='single_user'>";
-                                echo"<div>".$row['email']."</div>";
-                                echo"<div>".$row['family_name']."</div>";
-                                echo"<div>".$row['first_name']."</div>";
-                                echo"<div>".$row['typeBlood']."</div>";
-                                echo"<div>"."0".$row['Phone_num']."</div>";
-                                echo"<form action='' method='post'>";
-                                    echo "<input type='hidden' name='email' value='". $row['email']."'>";
-                                    echo"<input type='submit' value='Delete' name='delete'>";
-                                echo"</form>";
-                            echo"</div>";
-                        }
+                        echo"<table class='single_user'>";
+                            echo"<th>Email</th>";
+                            echo"<th>Family name</th>";
+                            echo"<th>First name</th>";
+                            echo"<th>Type Blood</th>";
+                            echo"<th>Phone number</th>";
+                            while($row = mysqli_fetch_assoc($result)){
+                                echo "<tr class='user_info'>";
+                                    echo"<td>".$row['email']."</td>";
+                                    echo"<td>".$row['family_name']."</td>";
+                                    echo"<td>".$row['first_name']."</td>";
+                                    echo"<td>".$row['typeBlood']."</td>";
+                                    echo"<td>"."0".$row['Phone_num']."</td>";
+                                    echo "<td>";
+                                        echo"<form action='' method='post'>";
+                                            echo "<input type='hidden' name='email' value='". $row['email']."'>";
+                                            echo"<input type='submit' value='Delete' name='delete'>";
+                                        echo"</form>";
+                                    echo"</td>";
+                                echo"</tr>";
+                            }
+                        echo"</table>";
                         if(isset($_POST['delete'])) { 
                             $email = $_POST['email'];
                             $req = "delete from users where email= '$email'";
@@ -114,19 +123,28 @@
                             else{
                                 echo"<div id='result_search'>";
                                     echo"<h2>Donataire between $startDate and $endDate </h2>";
-                                    while($row = mysqli_fetch_assoc($dates)){
-                                        echo"<div class='single_user'>";
-                                            echo"<div>".$row['email']."</div>";
-                                            echo"<div>".$row['family_name']."</div>";
-                                            echo"<div>".$row['first_name']."</div>";
-                                            echo"<div>".$row['typeBlood']."</div>";
-                                            echo"<div>"."0".$row['Phone_num']."</div>";
-                                            echo"<form action='' method='post'>";
-                                                echo "<input type='hidden' name='email' value='". $row['email']."'>";
-                                                echo"<input type='submit' value='Delete' name='delete'>";
-                                            echo"</form>";
-                                        echo"</div>";
-                                    }
+                                    echo"<table class='single_user'>";
+                                        echo"<th>Email</th>";
+                                        echo"<th>Family name</th>";
+                                        echo"<th>First name</th>";
+                                        echo"<th>Type Blood</th>";
+                                        echo"<th>Phone number</th>";
+                                        while($row = mysqli_fetch_assoc($dates)){
+                                            echo"<tr class='single_user'>";
+                                                echo"<td>".$row['email']."</td>";
+                                                echo"<td>".$row['family_name']."</td>";
+                                                echo"<td>".$row['first_name']."</td>";
+                                                echo"<td>".$row['typeBlood']."</td>";
+                                                echo"<td>"."0".$row['Phone_num']."</td>";
+                                                echo"<td>";
+                                                    echo"<form action='' method='post'>";
+                                                        echo "<input type='hidden' name='email' value='". $row['email']."'>";
+                                                        echo"<input type='submit' value='Delete' name='delete'>";
+                                                    echo"</form>";
+                                                echo"</td>";
+                                            echo"</tr>";
+                                        }
+                                    echo"</table>";
                                     echo"<button onclick='hideDonataire()'>Hide Donataire</button>";
                                 echo"</div>";
                                 echo"<script>";
