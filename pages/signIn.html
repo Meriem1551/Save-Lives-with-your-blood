@@ -28,12 +28,13 @@
     <main>
       <div class="signin_card">
         <!-- <h1>SIGN UP NOW!</h1> -->
+        <img src="../assets/images/admin/icons8-male-user-96.png" alt="">
         <form action="../php/Donataire.php" method="POST">
-          <input type="email" name="sign_email" placeholder="Email" required><br>
-          <input type="password" name="sign_passw" placeholder="Password" required><br>
-          <input type="text" name="family_name" placeholder="Family Name" required><br>
-          <input type="text" name="first_name" placeholder="First Name" required><br>
-          <input type="date" name="birthday" placeholder="Date of Birth"><br>
+          <input type="email" name="sign_email" placeholder="Email" class="inp" required><br>
+          <input type="password" name="sign_passw" placeholder="Password" class="inp" required><br>
+          <input type="text" name="family_name" placeholder="Family Name" class="inp" required><br>
+          <input type="text" name="first_name" placeholder="First Name" class="inp" required><br>
+          <input type="date" name="birthday" placeholder="Date of Birth" class="inp"><br>
           <select name="typeBlood" id="" required>
             <option value="A+">A+</option>
             <option value="A-">A-</option>
@@ -44,10 +45,10 @@
             <option value="O+">O+</option>
             <option value="O-">O-</option>
           </select><br>
-          <input type="text" name="phone_num" placeholder="Your Phone number" required><br>
+          <input type="text" name="phone_num" placeholder="Your Phone number" class="inp" required><br>
           <input type="submit" name="sign_in" value="Sign Up"  class="btn">
         </form>
-        <img src="../assets/images/Signin/—Pngtree—blood drop 3d icon health_8929242.png" alt="blood drop" width="200px">
+        <img src="../assets/images/Signin/—Pngtree—blood drop 3d icon health_8929242.png" alt="blood drop" width="200px" class="blood">
       </div>
     </main>
 </div>

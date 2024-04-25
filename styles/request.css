@@ -88,7 +88,8 @@ width: 600px;
 padding: 50px; 
 display: grid;
 place-content: center;
-margin-left: 30px;
+margin-left: 25%;
+animation: animeX 3s alternate;
 >h2{
     animation: 0;
     font-family: var(--font-family-heading);
@@ -96,6 +97,11 @@ margin-left: 30px;
      font-size: 2rem; 
     color: var(--red);
 }}
+@keyframes animeX {
+    from{
+        transform: translateX(-300px);
+    }
+}
 form{
     margin-top: 30px;
     

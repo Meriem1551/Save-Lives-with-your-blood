@@ -81,13 +81,14 @@
                         echo"<p>Empty data base</p>";
                     }
                     else{
-                        echo"<h2>All Donataires</h2>";
-                        echo"<table class='single_user'>";
+                        echo"<h2 style='margin-bottom:20px;'>All Donataires</h2>";
+                        echo"<table class='single_user' style='margin-bottom:40px;'>";
                             echo"<th>Email</th>";
                             echo"<th>Family name</th>";
                             echo"<th>First name</th>";
                             echo"<th>Type Blood</th>";
                             echo"<th>Phone number</th>";
+                            echo"<th>Delete</th>";
                             while($row = mysqli_fetch_assoc($result)){
                                 echo "<tr class='user_info'>";
                                     echo"<td>".$row['email']."</td>";

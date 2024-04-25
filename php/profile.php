@@ -20,20 +20,26 @@
     <link rel="stylesheet" href="../styles/profile.css">
     <title>Profile</title>
 </head>
-<style>
-    
-</style>
+
 <body>
-<header>
-        <img src="../assets/images/Home/icons8-blood-donation-64.png" alt="Blood Donation Icon"/>
+<header id="header">
+        <div id="logo">
+        <img src="../assets/images/Home/logo.png" alt="logo" id="logo">
+          <h3>Donate Life</h3>
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>  
-                <li><a href="./comments.php">Donataire</a></li> 
-                <li><button onclick="showAlert()">Log out</button></li>
+                <li class="separator">|</li> 
+                <li><a href="./comments.php">Donataire</a></li>
+                <li class="separator">|</li> 
+                <li><a href="#footer">Contacts</a></li>
+                <li class="separator">|</li>
+                <li><button onclick="showAlert()" class="login_out">Log out</button></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <div  class="userinfo">
             <?php
@@ -77,7 +83,7 @@
                             echo "email not provided";
                         }
             ?>
-            <button onclick="editProfile()">Edit</button>
+            
         </div>
 
         <div id="AlertBox" class="alert">
@@ -91,31 +97,32 @@
         </div>
         <!-- EDIT PROFILE -->
         <div id="edit-profile" class="edit_profile">
-            <form action="" method="post">
-                <label for="family_name">Family name:</label><br>
-                <input type="text" name="family_name" required><br>
-                <label for="first_name">First name:</label><br>
-                <input type="text" name="first_name" required><br>
-                <label for="birth-date">Date of birth:</label><br>
-                <input type="date" name="birth-date" required><br>
-                <label for="email" required>Type blood:</label><br>
-                <select name="typeBlood" required>
-                    <option value="A+">A+</option>
-                    <option value="A-">A-</option>
-                    <option value="B+">B+</option>
-                    <option value="B-">B-</option>
-                    <option value="AB+">AB+</option>
-                    <option value="AB-">AB-</option>
-                    <option value="O+">O+</option>
-                    <option value="O-">O-</option>
-                </select><br>
-                <label for="email">Phone number:</label><br>
-                <input type="text" name="phone_num" required><br>
-                <input type="submit" name="done" value="Done"  class="btn">
-                <button onclick="close_editProfile()">Cancel</button>
-            </form>
-        </div>
-    </main>
+        <!-- <h1>SIGN UP NOW!</h1> -->
+        <img src="../assets/images/admin/icons8-male-user-96.png" alt="">
+        <form action="../php/Donataire.php" method="POST">
+          <input type="text" name="family_name" placeholder="Family Name" required><br>
+          <input type="text" name="first_name" placeholder="First Name" required><br>
+          <input type="date" name="birth-date" placeholder="Date of Birth"><br>
+          <select name="typeBlood" id="" required>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select><br>
+          <input type="text" name="phone_num" placeholder="Your Phone number" required><br>
+          <div class="btn-form">
+          <input type="submit" name="done" value="Done"  class="btn">
+          <button onclick="close_editProfile()" class="cancel">Cancel</button>
+          </div>
+        </form>
+        <img src="../assets/images/Signin/—Pngtree—blood drop 3d icon health_8929242.png" alt="blood drop" width="200px" class="blood">
+      </div>
+        
+    </main><button onclick="editProfile()" class="edit">Edit</button>
     <script>
         function showAlert(){
             document.getElementById('AlertBox').style.display = 'block';

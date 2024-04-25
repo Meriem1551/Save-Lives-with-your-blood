@@ -29,8 +29,7 @@ main{
     background-color: var(--medium-red);
     color: var(--pink);
     width: 350px;
-    /* height: 418px; */
-    /* border-radius: 10px; */
+
 }
 input{
     background-color: transparent;

@@ -116,6 +116,7 @@ main button {
     font-size: 17px;
     color: var(--red);
     transition: .3s;
+    background-color: transparent;
 }
 
 button:hover {
@@ -153,6 +154,7 @@ input[type="submit"] {
     font-size: 17px;
     color: var(--red);
     transition: .3s;
+    background-color: transparent;
 }
 
 input[type="submit"]:hover {
@@ -166,11 +168,7 @@ input[type="submit"]:hover {
     margin-top: 20px;
 }
 
-.single_user {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-}
+
 
 /* Style de la boîte de recherche */
 #search_box {
@@ -189,9 +187,31 @@ input[type="submit"]:hover {
     display: flex;
     gap: 100px;
     justify-content: center;
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 #footer img{
     cursor: pointer;
 }
+
 /* rest of styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: var(--font-family-paragraphs);
+  }
+  
+  th, td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: white;
+  }

@@ -1,7 +1,26 @@
-.signup_bd{
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+    --light-pink:#fee5e5;
+    --medium-pink:#fed0d0;
+    --ligth-gray: lightgray;
+    --pink:#EFB3B4;
+    --red: #fc1b1b;
+    --medium-red: #a00404;
+    --dark-blue:#1E0377;
+    --white: white;
+    --dark-red:rgb(102, 2, 4);
+    --font-family-paragraphs : Poppins;
+    --font-family-heading: Kanit;
+    --font-weight-regular: 400;
+    --font-weight-semiBold: 600;
+    --font-weight-bold: 700;
+    --font-size: 20px;
+}.signup_bd{
     padding: 0;
     margin: 0;
-    background-color: var(--ligth-gray);
+    background-color: white;
     background-image: none;
     display: grid;
     place-content: center;
@@ -63,9 +82,9 @@ a:hover{
 }
 main{
     display: flex;
-    background-image: linear-gradient(45deg, rgb(161, 2, 2), pink, rgb(161, 1, 1));
+    background-color: black;
     margin: 50px;
-    box-shadow: 1px 1PX 5PX 3PX rgba(139, 69, 69, 0.87);
+    box-shadow: 1px 1PX 5PX 3PX rgba(0, 0, 0, 0.87);
 
 }
 .signin_card{
@@ -79,48 +98,54 @@ text-align: center;
     color: black;
 };
 }
-form>input{
+.signin_card .inp{
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--red);
     background-color: transparent;
     padding: 10px;
     width: 200px;
     margin-top: 10px;
     font-size: 15px;
-    color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--red);
+    font-family: var(--font-family-paragraphs);
 }
-.signin_card img{
+form>.inp::placeholder{
+    color: var(--red);
+}
+.signin_card .blood{
     position: absolute;
     top: 500px;
     right: 370px;
 }
 select, option{
-    border: 2px solid #000000;
+    border: 2px solid var(--red);
     background-color: transparent;
     text-align: center;
     padding: 10px;
     width: 200px;
     margin-top: 20px;
-    font-size: 15px;
-    color: black;
+    font-size: 19px;
+    color: var(--red);
+    font-family: var(--font-family-paragraphs);
 }
 option{
-    background-color: var(--dark-red);
-    color: var(--white);
+    background-color: var(--red);
+    color: black;
+    font-family: var(--font-family-paragraphs);
 }
 .btn{
-    border: 2px solid black;
+    border: 2px solid var(--red);
     width: 100px;
     margin-top: 20px;
     border-radius: 5px;
     font-family:var(--font-family-paragraphs);
     font-weight: var(--font-weight-bold);
     font-size: 20px;
-    color: black;
+    color: var(--red);
+    background-color: transparent;
 }
 .btn:hover{
-    background-color: black;
-    color: var(--white);
+    background-color: var(--red);
+    color: black;
     cursor: pointer;
 }

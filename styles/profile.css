@@ -1,38 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root{
     --light-pink:#fee5e5;
     --medium-pink:#fed0d0;
+    --ligth-gray: lightgray;
     --pink:#EFB3B4;
     --red: #fc1b1b;
+    --medium-red: #a00404;
     --dark-blue:#1E0377;
     --white: white;
-    --medium-red:rgb(171, 4, 6);
     --dark-red:rgb(102, 2, 4);
-    --font-family-paragraphs :Truculenta;
+    --font-family-paragraphs : Poppins;
     --font-family-heading: Kanit;
     --font-weight-regular: 400;
     --font-weight-semiBold: 600;
     --font-weight-bold: 700;
-    --font-size: 18px;
+    --font-size: 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
 }
 body{
-    background-image: url(../assets/images/Profile/Background.png);
+    
 }
-header{
+#header{
+    background-color: rgba(0,0 , 0, 0.8);
     display: flex;
     justify-content: end;
-    padding: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
+    position:relative;
+    padding-right: 50px;
+    position:sticky;
+    top: 0px;
+    align-items: center;
+    z-index: 999;
+    height: 80px;
 }
-header>img{
-    margin-right: auto;
-}
-header>nav>ul{
+#logo{
     display: flex;
-    list-style: none;
+    margin-right: auto;
+    align-items: center;
+}
+#logo >img{
+    width: 130px;
+}
+#logo>h3{
+    font-family:fantasy;
+    letter-spacing: 2px;
+    width: 50px;
+    color: var(--red);
+    background-color: transparent;
+    margin-left: -35px;
+}
+
+.separator{
+    color: var(--ligth-gray);
+}
+nav{
+    display: flex;
     gap: 100px;
+    margin-right: 200px;
+    align-items: center; 
 }
 ul{
-    right: auto;
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-semiBold);
+    font-size: 17px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--ligth-gray);
+}
+a:hover{
+    border-bottom: 4px solid var(--red);
+    padding-bottom: 23px;
+    cursor: pointer;
+}
+.login_out{
+    border: 2px solid var(--red);
+    width: 140px;
+    font-family: var(--font-family-heading);
+    font-size: 17px;
+    color: white;
+    transition: .3s;
+    margin-top: -10px;
+    padding: 10px 20px;
+    background-color: var(--red);
+}
+.edit{
+    border: 2px solid var(--red);
+    width: 120px;
+    font-family: var(--font-family-heading);
+    font-size: 17px;
+    color: white;
+    transition: .3s;
+    margin-top: 40px;
+    padding: 10px 20px;
+    background-color: var(--red);
+    margin-left: 43%;
 }
 
 .alert{
@@ -40,10 +111,9 @@ ul{
     position: fixed;
     top: 150px;
     left: 430px; 
-    background-color: var(--medium-red); 
-    color:  rgb(251, 184, 180);
+    background-color: black; 
+    color:  white;
     padding: 20px;
-    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     font-family: var(--font-family-heading);
     font-weight: var(--font-weight-semiBold);
@@ -53,19 +123,136 @@ ul{
     align-items: center;
     justify-content: end;
     column-gap: 30px;
+    margin-top: 25px;
+}
+#buttons>button:hover, form>input:hover{
+color:var(--ligth-gray);
+border-bottom: 2px solid var(--red);
 }
 #buttons>button, form>input{
     font-family: var(--font-family-heading);
     font-size: var(--font-size);
-    color: var(--medium-pink);
+    color:  var(--red);
     background-color: transparent;
     border: none;
+    padding-bottom: 6px;
+}
+main{
+    display: flex;
+    background-color: black;
+    margin: 50px;
+    box-shadow: 1px 1PX 5PX 3PX rgba(0, 0, 0, 0.87);
+    height: auto;
+    width: 450px;
+    margin-left: 30%;
 }
 .edit_profile{
+    /* display: none; */
+    /* position: fixed;
+    background-color: pink;
+    top: 40%;
+    left: 40.9%;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    >.user{
+        height: 100px;
+        width: 100px;
+    } */
     display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
+    padding: 80px;  
+    text-align: center; 
+    display: grid;
+    place-content: center;
+        >h1{
+            animation: none;
+            font-family: var(--font-family-heading);
+            font-weight: var( --font-weight-bold);
+            font-size: 3rem;
+            color: black;
+        };
+}
+form>input{
+    border: none;
+    border-bottom: 2px solid var(--red);
+    background-color: transparent;
+    padding: 10px;
+    width: 250px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: var(--red);
+    font-family: var(--font-family-paragraphs);
+    display: grid;
+    place-content: center;
+    margin-left: -70px;
+}
+
+.edit_profile .blood{
+    position: absolute;
+    top: 500px;
+    right: 370px;
+}
+select, option{
+    border: 2px solid var(--red);
+    background-color: transparent;
+    text-align: center;
+    padding: 10px;
+    width: 250px;
+    margin-top: 20px;
+    font-size: 19px;
+    color: var(--red);
+    margin-left: -70px;
+    font-family: var(--font-family-paragraphs);
+}
+option{
+    background-color: var(--red);
+    color: black;
+    font-family: var(--font-family-paragraphs);
+}
+
+.btn{
+    border: 2px solid var(--red);
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family:var(--font-family-paragraphs);
+    font-weight: var(--font-weight-bold);
+    background-color: black;
+    font-size: 20px;
+    color: var(--red);
+}
+.btn:hover{
+    background-color: black;
+    color: var(--white);
+    cursor: pointer;
+}
+.cancel{
+    border: 2px solid var(--red);
+    width: 100px;
+    top: -100px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family:var(--font-family-paragraphs);
+    font-weight: var(--font-weight-bold);
+    background-color: black;
+    font-size: 20px;
+    color: var(--red);
+    align-items: center;
+}
+.cancel:hover{
+    border: 2px solid var(--red);
+    width: 100px;
+    border-radius: 5px;
+    font-family:var(--font-family-paragraphs);
+    font-weight: var(--font-weight-bold);
+    font-size: 20px;
+    color: white;
 }
 /* rest of css for profile page */
 /* continue code */
+.btn-form{
+    display: flex;
+    margin-left: -60px;
+    margin-top: 10px;
+    justify-content: space-between;
+}

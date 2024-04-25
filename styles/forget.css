@@ -87,6 +87,7 @@ main{
     width: 400px;
     padding: 50px;
     margin-bottom: 80px;
+    animation: animeX 3s alternate;
     >h2{
         animation: 0;
         font-family: var(--font-family-heading);
@@ -122,23 +123,32 @@ input::placeholder{
     width: 140px;
     margin-top: 20px;
     border-radius: 5px;
-    font-family: var(--font-family-paragraphs);
-    font-size: 17px;
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-bold);
+    font-size: 20px;
     color: var(--red);
     transition: .3s;
     padding: 10px 20px;
-    margin-left: 60px;
+    margin-left: 10px;
 }
 .btn:hover{
     background-color: var(--red);
     color: var(--white);
     cursor: pointer;
 }
+@keyframes animeX {
+    from{
+        transform: translateX(-200px);
+    }
+}
 footer{
     background-color: black;
     display: flex;
     gap: 100px;
     justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 footer>img{
     cursor: pointer;

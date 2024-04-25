@@ -150,7 +150,7 @@
         </form>
     </div>
     </main>
-        <footer id="footer">
+    <footer id="footer">
         <img src="../assets/images/Home/icons8-facebook-60.png" alt="facebook" width="40px" haight="40px">
         <img src="../assets/images/Home/icons8-instagram-60.png" alt="instagram"width="40px" haight="40px">
         <img src="../assets/images/Home/icons8-twitter-60.png" alt="twitter" width="40px" haight="40px">
