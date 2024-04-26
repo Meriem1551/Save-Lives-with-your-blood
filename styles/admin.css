@@ -21,7 +21,7 @@ body{
     margin: auto;
     display: grid;
     place-content: center;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 main{
     padding: 50px;
@@ -68,7 +68,7 @@ h1{
 .admin-form img{
     height: 460px;
     width: 500px;
-    margin-top: 70px;
+    margin-top: 50px;
     
 }
 

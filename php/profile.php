@@ -83,7 +83,7 @@
         </div>
         <div id="profile">
             <div id="blogs">
-                <img src="../assets/images/admin/icons8-male-user-96.png" alt="profile" width="50px">
+                <img src="../assets/images/Profile/icons8-male-user-96.png" alt="profile" width="50px">
                 <img src="../assets/images/Profile/icons8-setting-96.png" alt="setting" width="50px">
                 <img src="../assets/images/Profile/icons8-meeting-time-96.png" alt="meeting_time" width="50px">
                 <img src="../assets/images/Profile/icons8-messages-96.png" alt="message" width="50px">
