@@ -106,7 +106,7 @@
                                     $bloodType = array("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-");
                                     foreach ($bloodType as $value) {
                                         if($value ==  $data['typeBlood'])
-                                            echo "<option selected='selected'>$value</option>";
+                                            echo "<option selected='selected'>$value</option>";//selectionner l'une de l'utilisateur via la base
                                         else  
                                             echo "<option>$value</option>";
                                     }
