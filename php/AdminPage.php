@@ -66,11 +66,6 @@
                 </div> 
             </form>
         </div>
-        <!-- contains persons who registered and he can delete them or serch for them donation between 2 dates -->
-        <h1>
-            <!-- find a title for that page or just remove it -->
-        </h1>
-        <!-- add search for users who donate between 2 dates as button and then show a bloc like edit profile-->
         <div id="users">
         <?php
             
@@ -78,7 +73,7 @@
                     $get_data = "select * from users where isDonate = true order by typeBlood "; 
                     $result = mysqli_query($id, $get_data);
                     if(mysqli_num_rows($result) <= 0){
-                        echo"<p>Empty data base</p>";
+                        echo"<h1>No person donate yet</h1>";
                     }
                     else{
                         echo"<h2 style='margin-bottom:20px;'>All Donataires</h2>";
