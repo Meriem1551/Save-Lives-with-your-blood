@@ -53,7 +53,7 @@
 nav{
     display: flex;
     gap: 100px;
-    margin-right: 200px;
+    margin-right: 100px;
     align-items: center; 
 }
 ul{
