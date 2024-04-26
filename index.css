@@ -392,3 +392,20 @@ color: white;
 #footer img{
     cursor: pointer;
 }
+
+#join:hover:after {
+    content: "If this is the first time you visit our website, sign up first";
+    visibility: visible;
+    position: absolute;
+    background-color: var(--white);
+    color: var(--red);
+    text-align: center;
+    padding: 5px 10px;
+    bottom: 70px;
+    left: 10px;
+    /* transform: translateX(-50%); */
+  }
+#join:after {/*:after used to add content after another content without changing html code*/
+    content: "";
+    visibility: hidden;
+  }
