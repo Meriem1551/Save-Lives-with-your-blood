@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
 :root{
-    --light-pink:#fee5e5;
-    --medium-pink:#fed0d0;
     --pink:#EFB3B4;
     --red: #fc1b1b;
     --medium-red:#ab0303;
-    --dark-blue:#1E0377;
     --white: white;
     --dark-red:rgb(102, 2, 4);
     --font-family-paragraphs :Truculenta;
@@ -17,7 +14,7 @@
     --font-size: 20px;
 }
 body{
-    background-color: white;
+    background-color: var(--white);
     margin: auto;
     display: grid;
     place-content: center;

@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root{
-    --light-pink:#fee5e5;
-    --medium-pink:#fed0d0;
     --ligth-gray: lightgray;
-    --pink:#EFB3B4;
     --red: #fc1b1b;
     --medium-red: #a00404;
-    --dark-blue:#1E0377;
     --white: white;
     --dark-red:rgb(102, 2, 4);
     --font-family-paragraphs : Poppins;
@@ -84,6 +80,8 @@ body {
     margin: 0 auto;
 }
 
+
+
 /* Styling the comment form */
 .comment-form {
     margin-left: 35%;
@@ -102,7 +100,7 @@ body {
 
 .comment-form #btn {
     background-color: var(--red);
-    color: white;
+    color: var(--white);
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -117,56 +115,111 @@ body {
 
 
 /* Styling the comment section */
-.comments-section {
+/* .comments-section {
     border-top: 1px solid #ccc;
     padding-top: 20px;
-}
+} */
 
 
-        #grid{
+/* .grid{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    margin-bottom: 100px;
+} */
+
+.grid{
     display: flex;
     justify-content: space-between;
     margin-top: 70px;
     margin-bottom: 100px;
 }
 
-#test-clients{
+/* .test-clients{
     display: flex;
     flex-direction: row;
     margin-top: 150px;
     justify-content: space-evenly;
     align-items: baseline;
     padding: 20px;
-    /* box-shadow: 1px 3PX 5PX 3PX rgba(2, 2, 2, 0.575); */
+    /* box-shadow: 1px 3PX 5PX 3PX rgba(2, 2, 2, 0.575); 
+}*/
+
+.test-clients{
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 80px; */
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 20px;
+
 }
 
-#test-clients #email{
+/* #test-clients #email{
     font-family: var(--font-family-heading);
     font-size: 16px;
     text-align: center;
     color: black;
     width: 315px;
     margin-bottom: 40px;
+} */
+
+.test-clients .email{
+    font-family: var(--font-family-heading);
+    font-size: 16px;
+    text-align: center;
+   
+    color: var(--red);
+    width: 315px;
+    margin-bottom: 40px;
 }
-#test-clients #comment{
+
+/* #test-clients #comment{
     font-family: var(--font-family-paragraphs);
     font-weight: var(--font-weights-normal);
     font-size: 16px;
     text-align: center;
     color: var(--red);
     margin-bottom: 10px;
+} */
+
+.test-clients .comment{font-family: var(--font-family-paragraphs);
+    font-weight: var(--font-weights-normal);
+    font-size: 16px;
+    text-align: center;
+     color: black;
+    margin-bottom: 10px;
 }
+
+/* .client{
+    box-shadow: 1px 3PX 5PX 3PX rgba(2, 2, 2, 0.575);
+} */
+
 .client{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     box-shadow: 1px 3PX 5PX 3PX rgba(2, 2, 2, 0.575);
 }
-.clients-h2{
+
+/* .clients-h2{
     color: var(--red);
     font-family: var(--font-family-heading);
     position: absolute;
     margin-left: 40%;
     letter-spacing: 3px;
     margin-top: 100px;
+} */
+
+.clients-h2{
+    color: var(--red);
+    font-family: var(--font-family-heading);
+    position: relative;
+    margin-left: 39%;
+    letter-spacing: 3px;
+    margin-top: 50px;
 }
+
 .delete-form{
     text-align: center;
 }

@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root{
-    --light-pink:#fee5e5;
-    --medium-pink:#fed0d0;
     --ligth-gray: lightgray;
-    --pink:#EFB3B4;
     --red: #fc1b1b;
     --medium-red: #a00404;
-    --dark-blue:#1E0377;
     --white: white;
     --dark-red:rgb(102, 2, 4);
     --font-family-paragraphs : Poppins;
@@ -81,7 +77,6 @@ a:hover{
     padding: 16px;
     font-size: 16px;
     border: none;
-    border-radius: 20px;
   }
     .sub-header {
     position: relative;
