@@ -2,7 +2,7 @@
 function connect($admin_email, $admin_passw){
     
         require_once 'db_connect.php';
-            $searchReq = "select * from admin where email = '$admin_email'  and password= '$admin_passw'";
+            $searchReq = "select * from admin where email_admin = '$admin_email'  and password= '$admin_passw'";
             $searchRes = mysqli_query($id, $searchReq);
             if(mysqli_num_rows($searchRes) <= 0) {
                 echo "<script>";
