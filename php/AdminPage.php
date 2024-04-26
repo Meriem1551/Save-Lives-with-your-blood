@@ -37,7 +37,7 @@
             </form>
         </div>
         <?php
-            require_once 'db_connect.php';
+            require 'db_connect.php';
                     if(isset($_POST['set_date'])) {
                         $new_date = $_POST['date'];
                         $req = "insert into dates values ('$new_date')";
@@ -69,7 +69,7 @@
         <div id="users">
         <?php
             
-                require_once 'db_connect.php';
+                require 'db_connect.php';
                     $get_data = "select * from users where isDonate = true order by typeBlood "; 
                     $result = mysqli_query($id, $get_data);
                     if(mysqli_num_rows($result) <= 0){
