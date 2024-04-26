@@ -10,7 +10,7 @@
 </head>
 <body>  
       <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Truculenta:opsz@12..72&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root{
     --light-pink:#fee5e5;
@@ -47,7 +47,7 @@
 .test-clients{
     display: flex;
     flex-direction: row;
-    margin-top: 100px;
+    /* margin-top: 80px; */
     justify-content: space-evenly;
     align-items: baseline;
     padding: 20px;
@@ -89,6 +89,8 @@
                 <li><a href="../pages/FAQ.html">FAQ</a></li>
                 <li class="separator">|</li> 
                 <li><a href="#footer">Contacts</a></li>
+                <li class="separator">|</li> 
+                <li><a href="../php/profile.php">Profile</a></li>
             </ul>
         </nav>
     </header>

@@ -60,7 +60,7 @@
                         echo"can not change dates";
                     }
                     else{
-                        header("Location: ../php/comments.php");
+                        header("Location: ../index.html");
                         exit;
                     }
                 }
