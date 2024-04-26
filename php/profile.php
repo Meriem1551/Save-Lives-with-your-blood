@@ -92,7 +92,7 @@
             <div id="user_profile">
                 <header>
                     <h1>Profile</h1>
-                    <img src="../assets/images/admin/icons8-male-user-96.png" alt="profile_icon">
+                    <img src="../assets/images/Profile/undraw_pic_profile_re_7g2h.svg" alt="profile_icon" width="100px">
                 </header>
                 <form action="" method="POST">
                     <div class="column">
