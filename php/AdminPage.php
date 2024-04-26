@@ -40,7 +40,7 @@
             require 'db_connect.php';
                     if(isset($_POST['set_date'])) {
                         $new_date = $_POST['date'];
-                        $req = "insert into dates values ('$new_date')";
+                        $req = "insert into dates (aval_donate_date) values ('$new_date')";
                         if(mysqli_query($id, $req) == 0){
                             echo "<script>";
                             echo "alert('Can not add this date');";
