@@ -168,9 +168,7 @@ body {
     font-family: var(--font-family-heading);
     font-size: 16px;
     text-align: center;
-   
     color: var(--red);
-    width: 315px;
     margin-bottom: 40px;
 }
 

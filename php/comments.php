@@ -40,7 +40,7 @@
                 while ($row = mysqli_fetch_assoc($res)) {
                    
                         echo"<div class='client'>";
-                            echo "<img src='../assets/images/admin/icons8-male-user-96.png' alt='imge' style='height:100px;width: 100px;margin-left:100px;margin-bottom:50px;'>";
+                            echo "<img src='../assets/images/Profile/icons8-male-user-96.png' alt='imge' style='height:100px;width: 100px;margin-left:35%;margin-bottom:50px;'>";
                             echo"<div class='email'>".$row['email']."</div>";
                             echo"<div class='comment'>".$row['comment']."</div>";
                             echo"<form action='' method='post' class='delete-form'>";
