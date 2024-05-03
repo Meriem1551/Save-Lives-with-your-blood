@@ -55,9 +55,9 @@
                 if (isset($_POST['donate'])){
                     $email = $_POST['email'];
                     $done_date = $_POST['date'];
-                    $req = "update users set donation_date = '$done_date', isDonate = true where email = '$email' ";
+                    $req = "insert into donation (email, date) values ('$email', '$done_date') ";
                     if(mysqli_query($id, $req) == 0){
-                        echo"can not change dates";
+                        echo"can not make a request";
                     }
                     else{
                         header("Location: ../index.html");

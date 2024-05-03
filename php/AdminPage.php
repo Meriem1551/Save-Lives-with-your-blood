@@ -70,7 +70,7 @@
         <?php
             
                 require 'db_connect.php';
-                    $get_data = "select * from users where isDonate = true order by typeBlood "; 
+                    $get_data = "select * from users join donation where users.email = donation.email ";
                     $result = mysqli_query($id, $get_data);
                     if(mysqli_num_rows($result) <= 0){
                         echo"<h1>No person donate yet</h1>";
@@ -83,7 +83,7 @@
                             echo"<th>First name</th>";
                             echo"<th>Type Blood</th>";
                             echo"<th>Phone number</th>";
-                            echo"<th>Delete</th>";
+                            echo"<th>Donation date</th>";
                             while($row = mysqli_fetch_assoc($result)){
                                 echo "<tr class='user_info'>";
                                     echo"<td>".$row['email']."</td>";
@@ -91,6 +91,7 @@
                                     echo"<td>".$row['first_name']."</td>";
                                     echo"<td>".$row['typeBlood']."</td>";
                                     echo"<td>"."0".$row['Phone_num']."</td>";
+                                    echo"<td>".$row['date']."</td>";
                                     echo "<td>";
                                         echo"<form action='' method='post'>";
                                             echo "<input type='hidden' name='email' value='". $row['email']."'>";

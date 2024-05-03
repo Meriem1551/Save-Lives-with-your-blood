@@ -34,23 +34,28 @@
          <h2 class="clients-h2">CLIENT TESTIMONIALS </h2>
         <?php
                 require_once 'db_connect.php';
-                $req = "select * from comments";
-                $res =  mysqli_query($id,$req);
-                 echo"<div class='test-clients'>";
-                while ($row = mysqli_fetch_assoc($res)) {
-                   
-                        echo"<div class='client'>";
-                            echo "<img src='../assets/images/Profile/icons8-male-user-96.png' alt='imge' style='height:100px;width: 100px;margin-left:35%;margin-bottom:50px;'>";
-                            echo"<div class='email'>".$row['email']."</div>";
-                            echo"<div class='comment'>".$row['comment']."</div>";
-                            echo"<form action='' method='post' class='delete-form'>";
-                                echo"<input type='hidden' name='email' value = '".$row['email']."'>";
-                                echo"<input type='hidden' name='comment_id' value = '".$row['id']."'>";
-                                echo"<input type='submit' name='delete' value='Delete' class='delete'>";
-                            echo"</form>";
-                        echo "</div>";
-                   
-                } echo"</div>";
+                session_start();
+                if(isset($_SESSION['login_email'])){
+                    $email = $_SESSION['login_email'];
+                    $req = "select * from comments";
+                    $res =  mysqli_query($id,$req);
+                    echo"<div class='test-clients'>";
+                        while ($row = mysqli_fetch_assoc($res)) {
+                            echo"<div class='client'>";
+                                echo "<img src='../assets/images/Profile/icons8-male-user-96.png' alt='imge' style='height:100px;width: 100px;'>";
+                                echo"<div class='email'>".$row['email']."</div>";
+                                echo"<div class='comment'>".$row['comment']."</div>";
+                                if(strcmp($email, $row['email']) == 0){
+                                    echo"<form action='' method='post' class='delete-form'>";
+                                        echo"<input type='hidden' name='email' value = '".$row['email']."'>";
+                                        echo"<input type='hidden' name='comment_id' value = '".$row['id']."'>";
+                                        echo"<input type='submit' name='delete' value='Delete' class='delete'>";
+                                    echo"</form>";
+                                }
+                            echo "</div>";
+                        } 
+                    echo"</div>";
+                }
                     if(isset( $_POST['post'])){
                         $email = $_POST['email'];
                         $comment = $_POST['comment'];
